@@ -1471,6 +1471,26 @@
       birthdayReadWaitMessage: "Em hãy chờ đến ngày sinh nhật để đọc nhé",
     };
 
+    /**
+     * Ảnh / nhạc: luôn resolve đúng khi site nằm trong thư mục con (GitHub Pages dạng /TênRepo/)
+     * hoặc khi pathname không có "/" cuối — tránh request nhầm /photos/... thay vì /TênRepo/photos/...
+     */
+    function assetUrl(relPath) {
+      const rel = String(relPath || "")
+        .replace(/\\/g, "/")
+        .replace(/^\/+/, "")
+        .replace(/\/+/g, "/");
+      const enc = rel.split("/").map((s) => encodeURIComponent(s)).join("/");
+      const u = new URL(location.href);
+      let path = u.pathname;
+      if (path.endsWith(".html")) {
+        path = path.slice(0, path.lastIndexOf("/") + 1);
+      } else if (!path.endsWith("/")) {
+        path += "/";
+      }
+      return u.origin + path + enc;
+    }
+
     function getBirthdayReadUnlockAt() {
       const y = CONFIG.birthdayReadUnlockYear;
       const mo = CONFIG.birthdayReadUnlockMonth;
@@ -1675,7 +1695,7 @@
       const btn = document.getElementById("music-toggle");
       const vol = document.getElementById("music-vol");
       if (!audio || !btn) return;
-      if (source && CONFIG.audioSrc) source.src = CONFIG.audioSrc;
+      if (source && CONFIG.audioSrc) source.src = assetUrl(CONFIG.audioSrc);
       audio.load();
       const labelEl = btn.querySelector(".music-label");
       const iconEl = btn.querySelector(".music-icon");
@@ -1792,11 +1812,7 @@
       if (!strip || !grid || !lb || !lbImg || !lbCap) return;
 
       function photoUrl(file) {
-        const rel = `${CONFIG.photoDir}/${file}`.replace(/\\/g, "/").replace(/\/+/g, "/");
-        return rel
-          .split("/")
-          .map((seg) => encodeURIComponent(seg))
-          .join("/");
+        return assetUrl(`${CONFIG.photoDir}/${file}`.replace(/\/+/g, "/"));
       }
 
       if (list.length === 0) {
