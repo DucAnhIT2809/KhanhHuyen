@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
+  <base href="./" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Đức Anh gửi lời chúc đến Khánh Huyền — sinh nhật và kỷ niệm." />
   <title>Đức Anh → Khánh Huyền 💕</title>
@@ -1848,12 +1849,13 @@
 
       shuffleArray(list)
         .slice(0, 12)
-        .forEach((f) => {
+        .forEach((f, i) => {
           const fig = document.createElement("figure");
           const img = document.createElement("img");
           img.src = photoUrl(f);
           img.alt = "Khoảnh khắc Đức Anh và Khánh Huyền";
-          img.loading = "lazy";
+          img.loading = i < 6 ? "eager" : "lazy";
+          img.decoding = "async";
           img.addEventListener("click", () => openLightbox(f));
           fig.appendChild(img);
           strip.appendChild(fig);
@@ -1867,7 +1869,8 @@
         const img = document.createElement("img");
         img.src = photoUrl(f);
         img.alt = "";
-        img.loading = "lazy";
+        img.loading = i < 9 ? "eager" : "lazy";
+        img.decoding = "async";
         card.appendChild(img);
         card.addEventListener("click", () => openLightbox(f));
         grid.appendChild(card);
