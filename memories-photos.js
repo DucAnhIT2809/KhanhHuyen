@@ -2,9 +2,6 @@
 window.MEMORIES_PHOTOS = [
   "688892467_1538451644529904_1503627985774589424_n.png",
   "7EDF2963-A024-476A-971C-EADE00FFB1AC.JPG",
-  "Ảnh màn hình 2026-05-12 lúc 22.31.56.png",
-  "Ảnh màn hình 2026-05-12 lúc 22.32.14.png",
-  "Ảnh màn hình 2026-05-12 lúc 22.32.24.png",
   "att.dCASYFiSApBJnNq7ytHGwJIDik7gtjnq2W8yhIbWUT8.JPG",
   "att.JQmqW_1uVCNMmJOHowC7lrC1UFXROaBkeAPhYzL9ieE.JPG",
   "att.q7VAb5SxDdCp2tf3K9oTUkLsxUvdfVK0jbr6FiRsMx8.JPG",
@@ -77,5 +74,8 @@ window.MEMORIES_PHOTOS = [
   "IMG_9572.JPG",
   "IMG_9582.JPG",
   "IMG_9948.JPG",
+  "screenshot-2026-05-12-223156.png",
+  "screenshot-2026-05-12-223214.png",
+  "screenshot-2026-05-12-223224.png",
   "VID_20250530014138920.JPG"
 ];
