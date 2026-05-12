@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Đức Anh gửi lời chúc đến Khánh Huyền — sinh nhật và kỷ niệm." />
+  <title>Đức Anh → Khánh Huyền 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&family=Playwrite+VN:wght@100..400&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg-deep: #140810;
+      --bg-mid: #2a1420;
+      --rose: #ff5c8a;
+      --rose-deep: #e03d6b;
+      --rose-soft: #ffb3d0;
+      --gold: #f0d78c;
+      --gold-dim: rgba(240, 215, 140, 0.35);
+      --glass: rgba(255, 255, 255, 0.055);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --text: #fff7fa;
+      --muted: rgba(255, 247, 250, 0.78);
+      --paper: #fdf6f0;
+      --paper-ink: #3a2a2a;
+      --paper-line: rgba(58, 42, 42, 0.12);
+      --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --btn-pink-top: #ffe5ef;
+      --btn-pink: #ffc9dc;
+      --btn-pink-deep: #f5b0ca;
+      --btn-pink-border: #e89ab8;
+      --btn-pink-text: #3d1528;
+      --orb-a: rgba(255, 92, 138, 0.22);
+      --orb-b: rgba(240, 215, 140, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Manrope", system-ui, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #ambient-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .ambient-slab {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 2.4s ease-in-out;
+    }
+
+    .ambient-slab.is-visible {
+      opacity: 1;
+    }
+
+    .ambient-theme-romantic {
+      background:
+        radial-gradient(ellipse 100% 70% at 50% -15%, #5c2840 0%, transparent 55%),
+        radial-gradient(ellipse 80% 50% at 100% 50%, rgba(255, 92, 138, 0.14), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 0% 80%, rgba(240, 215, 140, 0.1), transparent 45%),
+        #140810;
+    }
+
+    .ambient-theme-anime-sky {
+      background:
+        radial-gradient(ellipse 115% 75% at 50% -8%, rgba(255, 183, 197, 0.55) 0%, transparent 48%),
+        radial-gradient(ellipse 85% 55% at 15% 55%, rgba(167, 139, 250, 0.28), transparent 52%),
+        radial-gradient(ellipse 90% 50% at 95% 85%, rgba(147, 197, 253, 0.22), transparent 55%),
+        linear-gradient(165deg, #1a0f28 0%, #120a18 55%, #0a0610 100%);
+    }
+
+    .ambient-theme-sakura {
+      background:
+        radial-gradient(ellipse 95% 55% at 50% 0%, rgba(255, 182, 193, 0.35) 0%, transparent 52%),
+        radial-gradient(circle at 85% 25%, rgba(251, 207, 232, 0.2), transparent 42%),
+        radial-gradient(circle at 10% 75%, rgba(252, 231, 243, 0.12), transparent 48%),
+        radial-gradient(ellipse 70% 40% at 50% 100%, rgba(88, 28, 52, 0.5), transparent 60%),
+        #160a12;
+    }
+
+    .ambient-theme-golden-hour {
+      background:
+        radial-gradient(ellipse 100% 60% at 50% -12%, rgba(124, 45, 18, 0.65) 0%, transparent 50%),
+        radial-gradient(ellipse 75% 55% at 0% 100%, rgba(251, 146, 60, 0.18), transparent 52%),
+        radial-gradient(ellipse 65% 45% at 100% 35%, rgba(250, 204, 21, 0.12), transparent 48%),
+        #120806;
+    }
+
+    .ambient-theme-anime-night {
+      background:
+        radial-gradient(ellipse 85% 45% at 75% 5%, rgba(56, 189, 248, 0.16), transparent 52%),
+        radial-gradient(ellipse 55% 50% at 8% 75%, rgba(232, 121, 249, 0.14), transparent 50%),
+        radial-gradient(ellipse 120% 80% at 50% 110%, rgba(15, 23, 42, 0.85) 0%, transparent 55%),
+        #070b16;
+    }
+
+    .ambient-theme-aurora {
+      background:
+        radial-gradient(ellipse 100% 50% at 35% -5%, rgba(52, 211, 153, 0.2), transparent 55%),
+        radial-gradient(ellipse 75% 55% at 100% 45%, rgba(167, 139, 250, 0.22), transparent 50%),
+        radial-gradient(ellipse 50% 45% at 0% 95%, rgba(45, 212, 191, 0.12), transparent 48%),
+        #081016;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ambient-slab {
+        transition: none;
+      }
+    }
+
+    #hearts-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.92;
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 1;
+      transition: background 2.4s ease-in-out;
+    }
+
+    .orb-a {
+      width: min(420px, 90vw);
+      height: min(420px, 90vw);
+      background: var(--orb-a);
+      top: -8%;
+      right: -12%;
+    }
+
+    .orb-b {
+      width: min(360px, 80vw);
+      height: min(360px, 80vw);
+      background: var(--orb-b);
+      bottom: 5%;
+      left: -15%;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 2rem 1.15rem 6.5rem;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 2.5rem 0 1.5rem;
+      animation: fadeUp 0.9s ease-out both;
+    }
+
+    .names-ribbon {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem 0.75rem;
+      padding: 0.45rem 1.15rem;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 1.35rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .names-ribbon strong {
+      color: var(--rose-soft);
+      font-weight: 600;
+    }
+
+    .names-ribbon .arrow {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.35rem, 5.8vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.18;
+      background: linear-gradient(125deg, #fff 0%, var(--rose-soft) 42%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.85rem;
+      max-width: 18ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero .sub {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 38ch;
+      margin: 0 auto;
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    .dates-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2.25rem;
+      animation: fadeUp 0.9s ease-out 0.12s both;
+    }
+
+    @media (max-width: 600px) {
+      .dates-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .date-card {
+      background: linear-gradient(150deg, var(--glass), rgba(255, 92, 138, 0.07));
+      border: 1px solid var(--glass-border);
+      border-radius: 1.2rem;
+      padding: 1.3rem 1.2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .date-card::before {
+      content: "";
+      position: absolute;
+      top: -45%;
+      right: -25%;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(255, 92, 138, 0.32), transparent 72%);
+      pointer-events: none;
+    }
+
+    .date-card h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.32rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+
+    .date-card .big-date {
+      font-size: 1.95rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--rose-soft);
+    }
+
+    .date-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 0.55rem;
+      line-height: 1.55;
+    }
+
+    .actions {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      justify-content: center;
+      animation: fadeUp 0.9s ease-out 0.22s both;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.78rem 1.2rem;
+      border-radius: 999px;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-pink {
+      background: linear-gradient(180deg, var(--btn-pink-top) 0%, var(--btn-pink) 45%, var(--btn-pink-deep) 100%);
+      color: var(--btn-pink-text);
+      border: 1px solid var(--btn-pink-border);
+      box-shadow: 0 6px 22px rgba(255, 150, 185, 0.28);
+    }
+
+    .btn-pink:hover {
+      filter: brightness(1.04);
+      box-shadow: 0 10px 28px rgba(255, 130, 175, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-pink:focus-visible {
+      outline: 2px solid var(--rose-soft);
+      outline-offset: 2px;
+    }
+
+    .panel {
+      margin-top: 2rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 1.2rem;
+      padding: 1.45rem 1.25rem;
+      animation: fadeUp 0.85s ease-out 0.08s both;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .panel.hidden {
+      display: none;
+    }
+
+    .memories.hidden {
+      display: none;
+    }
+
+    .panel h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.55rem;
+      margin-bottom: 0.85rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .panel p,
+    .panel li {
+      color: var(--muted);
+      line-height: 1.68;
+      font-size: 0.96rem;
+    }
+
+    .panel p + p {
+      margin-top: 0.85rem;
+    }
+
+    .panel ul {
+      margin-left: 1.15rem;
+      margin-top: 0.45rem;
+    }
+
+    .panel li + li {
+      margin-top: 0.4rem;
+    }
+
+    .quote-line {
+      font-style: italic;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.28rem;
+      color: var(--text);
+      margin-top: 0.65rem;
+      line-height: 1.45;
+    }
+
+    /* Thư tay — giấy + chữ viết tay */
+    .letter-panel {
+      background: linear-gradient(180deg, rgba(253, 246, 240, 0.97), rgba(248, 236, 228, 0.96));
+      border: 1px solid rgba(58, 42, 42, 0.12);
+      color: var(--paper-ink);
+      box-shadow:
+        0 4px 0 rgba(255, 255, 255, 0.5) inset,
+        0 28px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .letter-panel .letter-head-text h3 {
+      color: #6b3d4a;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.45rem;
+      border-bottom: 1px solid var(--paper-line);
+      padding-bottom: 0.65rem;
+      margin-bottom: 0;
+    }
+
+    .letter-meta {
+      font-family: "Manrope", sans-serif;
+      font-size: 0.8rem;
+      color: rgba(58, 42, 42, 0.55);
+      margin-bottom: 1.1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .letter-body {
+      font-family: "Playwrite VN", "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(0.95rem, 2.8vw, 1.08rem);
+      line-height: 1.85;
+      color: var(--paper-ink);
+      background-image: repeating-linear-gradient(
+        transparent,
+        transparent 1.65em,
+        var(--paper-line) 1.65em,
+        var(--paper-line) calc(1.65em + 1px)
+      );
+      padding-bottom: 0.25rem;
+    }
+
+    .letter-body p {
+      color: var(--paper-ink);
+      margin-top: 0;
+    }
+
+    .letter-body p + p {
+      margin-top: 1.05em;
+    }
+
+    .letter-sign {
+      margin-top: 1.6rem;
+      text-align: right;
+      font-family: "Playwrite VN", cursive;
+      font-size: 1.15rem;
+      color: #5c3240;
+    }
+
+    .letter-sign .name {
+      font-weight: 600;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    .letter-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .letter-head-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .letter-head-text h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .seal {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #c94a5c, #7a2230);
+      box-shadow:
+        inset 0 2px 4px rgba(255, 255, 255, 0.25),
+        0 6px 16px rgba(0, 0, 0, 0.35);
+      border: 2px solid rgba(122, 34, 48, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+    }
+
+    /* Popup thư tay */
+    .letter-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 220;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+
+    .letter-modal.hidden {
+      display: none;
+    }
+
+    .letter-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 4, 8, 0.72);
+      backdrop-filter: blur(8px);
+    }
+
+    .letter-modal-box {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 520px);
+      max-height: min(88vh, 720px);
+      display: flex;
+      flex-direction: column;
+      border-radius: 1.15rem;
+      padding: 0.85rem 1.1rem 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .letter-modal-toolbar {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 0.35rem;
+    }
+
+    .letter-modal-scroll {
+      overflow-y: auto;
+      flex: 1;
+      min-height: 0;
+      padding-right: 0.15rem;
+    }
+
+    .letter-modal-close {
+      appearance: none;
+      border: 1px solid rgba(58, 42, 42, 0.2);
+      background: rgba(255, 255, 255, 0.65);
+      color: var(--paper-ink);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .letter-modal-close:hover {
+      background: #fff;
+    }
+
+    .letter-body-stack {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .letter-body-stack.is-locked {
+      filter: blur(11px);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .birthday-content-lock {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.35rem 1.1rem;
+      border-radius: inherit;
+      text-align: center;
+    }
+
+    .birthday-content-lock.hidden {
+      display: none;
+    }
+
+    .birthday-content-lock--paper {
+      background: rgba(253, 246, 240, 0.78);
+      backdrop-filter: blur(4px);
+    }
+
+    .birthday-content-lock--paper p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.2rem, 3.8vw, 1.55rem);
+      font-weight: 600;
+      color: #5c3240;
+      line-height: 1.45;
+      max-width: 26ch;
+      margin: 0;
+    }
+
+    .birthday-content-lock--glass {
+      background: rgba(14, 6, 10, 0.58);
+      backdrop-filter: blur(8px);
+    }
+
+    .birthday-content-lock--glass p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+      font-weight: 600;
+      color: var(--rose-soft);
+      line-height: 1.45;
+      max-width: 28ch;
+      margin: 0;
+    }
+
+    #panel-quote {
+      position: relative;
+    }
+
+    .panel-quote-inner.is-locked {
+      filter: blur(11px);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .words-block {
+      background: rgba(0, 0, 0, 0.22);
+      border-radius: 0.85rem;
+      padding: 1rem 1.05rem;
+      margin-top: 0.75rem;
+      border-left: 3px solid var(--gold-dim);
+    }
+
+    .words-block h4 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.15rem;
+      color: var(--rose-soft);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .words-block p {
+      font-size: 0.93rem;
+    }
+
+    .plans-section {
+      margin-top: 2.75rem;
+      animation: fadeUp 0.9s ease-out 0.35s both;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 720px) {
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .plan-card {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid var(--glass-border);
+      border-radius: 1.1rem;
+      padding: 1.25rem 1.15rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .plan-card:hover {
+      border-color: rgba(255, 92, 138, 0.38);
+      transform: translateY(-2px);
+    }
+
+    .plan-card h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+      color: var(--gold);
+      margin-bottom: 0.95rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .plan-list {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .plan-list li + li {
+      margin-top: 0.55rem;
+    }
+
+    .plans-intro {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 1.25rem;
+      line-height: 1.55;
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .plan-sub {
+      display: inline-block;
+      position: relative;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.28rem, 3.4vw, 1.58rem);
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.22em;
+      line-height: 1.15;
+      margin-top: 0.1rem;
+      padding-bottom: 0.42rem;
+      color: #f5e6b8;
+      text-shadow:
+        0 0 22px rgba(240, 215, 140, 0.35),
+        0 1px 0 rgba(58, 24, 40, 0.45);
+      font-variant-numeric: lining-nums;
+    }
+
+    .plan-sub::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: min(4.5rem, 55%);
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 179, 208, 0.65) 0%,
+        rgba(240, 215, 140, 0.55) 45%,
+        transparent 100%
+      );
+    }
+
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+      .plan-sub {
+        background-image: linear-gradient(
+          118deg,
+          #fff8e0 0%,
+          var(--gold) 42%,
+          var(--rose-soft) 92%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+      }
+
+      .plan-sub::after {
+        opacity: 0.95;
+      }
+    }
+
+    .plan-timeline {
+      margin: 0;
+      padding: 0;
+    }
+
+    .plan-slot {
+      display: grid;
+      grid-template-columns: minmax(5.25rem, 6.25rem) 1fr;
+      gap: 0.65rem 1rem;
+      align-items: start;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .plan-slot:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .plan-slot:first-child {
+      padding-top: 0;
+    }
+
+    .plan-time {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .plan-desc {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.58;
+    }
+
+    .plan-desc strong {
+      color: var(--rose-soft);
+      font-weight: 600;
+    }
+
+    .memories .hero-filmstrip-wrap {
+      margin-top: 0;
+      margin-bottom: 1.35rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2.75rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--glass-border);
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+
+    footer .heart-inline {
+      color: var(--rose);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .sparkle {
+      display: inline-block;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.72;
+        transform: scale(1.04);
+      }
+    }
+
+    .countdown-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 0.65rem;
+    }
+
+    .count-pill {
+      flex: 1;
+      min-width: 140px;
+      background: rgba(0, 0, 0, 0.32);
+      border-radius: 0.75rem;
+      padding: 0.6rem 0.8rem;
+      font-size: 0.86rem;
+    }
+
+    .count-pill b {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.22rem;
+    }
+
+    .panel-hint {
+      font-size: 0.82rem;
+      color: rgba(255, 247, 250, 0.62);
+      margin-top: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hero-filmstrip-wrap {
+      margin-top: 1.75rem;
+      animation: fadeUp 0.9s ease-out 0.08s both;
+    }
+
+    .hero-filmstrip-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255, 247, 250, 0.5);
+      margin-bottom: 0.55rem;
+      text-align: center;
+    }
+
+    .hero-filmstrip {
+      display: flex;
+      gap: 0.55rem;
+      overflow-x: auto;
+      padding: 0.4rem 0 0.75rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+    }
+
+    .hero-filmstrip figure {
+      flex: 0 0 auto;
+      margin: 0;
+      scroll-snap-align: center;
+    }
+
+    .hero-filmstrip img {
+      height: clamp(96px, 22vw, 132px);
+      width: auto;
+      max-width: min(200px, 42vw);
+      border-radius: 0.7rem;
+      object-fit: cover;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      display: block;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-filmstrip img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 40px rgba(255, 92, 138, 0.2);
+    }
+
+    .memories {
+      margin-top: 2.75rem;
+      animation: fadeUp 0.95s ease-out 0.06s both;
+    }
+
+    .memories-head {
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .memories-head h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.65rem, 4.2vw, 2.15rem);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .memories-sub {
+      color: var(--muted);
+      font-size: 0.94rem;
+      max-width: 46ch;
+      margin: 0 auto;
+      line-height: 1.55;
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.65rem;
+    }
+
+    @media (min-width: 520px) {
+      .memory-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+    }
+
+    .memory-card {
+      position: relative;
+      border-radius: 0.85rem;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      aspect-ratio: 3 / 4;
+      background: rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s;
+      padding: 0;
+      appearance: none;
+      font: inherit;
+      color: inherit;
+      display: block;
+      width: 100%;
+    }
+
+    .memory-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 179, 208, 0.45);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    .memory-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: rgba(30, 12, 20, 0.6);
+    }
+
+    .memory-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(20, 8, 16, 0.55));
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    .memory-card:hover::after {
+      opacity: 1;
+    }
+
+    .memory-empty {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 2rem 1rem;
+      border: 1px dashed var(--glass-border);
+      border-radius: 1rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(8, 3, 6, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .lightbox.hidden {
+      display: none;
+    }
+
+    .lightbox img {
+      max-width: min(96vw, 1100px);
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+      background: rgba(20, 8, 16, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: max(1rem, env(safe-area-inset-top));
+      right: max(1rem, env(safe-area-inset-right));
+      appearance: none;
+      border: 1px solid var(--glass-border);
+      background: var(--glass);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.88rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--glass-border);
+      background: rgba(0, 0, 0, 0.45);
+      color: var(--text);
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(255, 92, 138, 0.35);
+    }
+
+    .lightbox-prev {
+      left: max(0.75rem, env(safe-area-inset-left));
+    }
+
+    .lightbox-next {
+      right: max(0.75rem, env(safe-area-inset-right));
+    }
+
+    @media (max-width: 520px) {
+      .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.35rem;
+      }
+    }
+
+    .lightbox-cap {
+      position: absolute;
+      bottom: max(1.25rem, env(safe-area-inset-bottom));
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .music-dock {
+      position: fixed;
+      z-index: 150;
+      bottom: max(1rem, env(safe-area-inset-bottom));
+      right: max(1rem, env(safe-area-inset-right));
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+      max-width: calc(100vw - 2rem);
+    }
+
+    .music-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--glass-border);
+      background: linear-gradient(145deg, rgba(30, 14, 22, 0.92), rgba(45, 20, 34, 0.88));
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+    }
+
+    .music-toggle:hover {
+      border-color: rgba(255, 179, 208, 0.4);
+    }
+
+    .music-toggle.is-playing {
+      border-color: rgba(255, 92, 138, 0.55);
+      box-shadow: 0 10px 32px rgba(255, 92, 138, 0.25);
+    }
+
+    .music-icon {
+      font-size: 1.1rem;
+      width: 1.75rem;
+      text-align: center;
+    }
+
+    .music-label {
+      white-space: nowrap;
+    }
+
+    .music-vol {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--glass-border);
+    }
+
+    .music-vol input[type="range"] {
+      width: min(140px, 40vw);
+      accent-color: var(--rose);
+    }
+  </style>
+</head>
+<body>
+  <div id="ambient-bg" aria-hidden="true">
+    <div class="ambient-slab ambient-theme-romantic is-visible"></div>
+    <div class="ambient-slab ambient-theme-anime-sky"></div>
+  </div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+  <canvas id="hearts-canvas" aria-hidden="true"></canvas>
+
+  <div class="wrap">
+    <header class="hero">
+      <div class="names-ribbon">
+        <span class="sparkle">✦</span>
+        <strong>Gửi tới em yêu Khánh Huyền</strong>
+      </div>
+      <h1>Hôm nay anh muốn nhắc em: em rất đặc biệt</h1>
+      <p class="sub">
+        Một trang nhỏ anh làm để chúc mừng sinh nhật em, nhớ ngày mình bên nhau, và để nói hết những điều
+        đôi khi anh ngại nói bằng lời.
+      </p>
+
+      <div class="dates-grid">
+        <article class="date-card">
+          <h2>🎂 Sinh nhật Khánh Huyền</h2>
+          <div class="big-date" id="birth-display">18 · 05 · 2004</div>
+          <p id="birth-age">Chúc em sinh nhật vui vẻ. Mãi yêu em</p>
+        </article>
+        <article class="date-card">
+          <h2>💗 Anniversary 1 year</h2>
+          <div class="big-date">25 · 05</div>
+          <p>
+            Sắp tới kỉ niệm 1 năm rùi. Anh với em đã yêu nhau được 1 năm . Thật tuyệt . Yêu em
+          </p>
+        </article>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn btn-pink" id="btn-letter">Mở thư tay</button>
+        <button type="button" class="btn btn-pink" id="btn-quote">Lời muốn nói</button>
+        <button type="button" class="btn btn-pink" id="btn-surprise">Bất ngờ nhỏ</button>
+        <button type="button" class="btn btn-pink" id="btn-countdown">Đếm ngược</button>
+        <button type="button" class="btn btn-pink" id="btn-photos">Album ảnh</button>
+      </div>
+    </header>
+
+    <section class="memories hidden" id="ky-niem" aria-labelledby="memories-title">
+      <div class="hero-filmstrip-wrap" id="hero-strip-wrap">
+        <p class="hero-filmstrip-label">Một vài khoảnh khắc anh và em</p>
+        <div class="hero-filmstrip" id="hero-filmstrip" role="list"></div>
+      </div>
+      <div class="memories-head">
+        <h2 id="memories-title">Album ảnh — lưu giữ kỷ niệm</h2>
+        <p class="memories-sub">Em bấm từng ảnh để xem nhé hihi, và nhớ nghe lời bài hát nữa nhé. Đố em tại sao có 78 ảnh đó. </p>
+      </div>
+      <div class="memory-grid" id="memory-grid"></div>
+    </section>
+
+    <section class="panel hidden" id="panel-quote" role="region" aria-live="polite">
+      <div id="panel-quote-inner" class="panel-quote-inner">
+      <h3>Lời anh muốn nói với em</h3>
+      <p class="quote-line" style="margin-bottom: 1rem">
+        “Anh không cần thế giới rộng lắm — chỉ cần có em trong đó.”
+      </p>
+
+      <div class="words-block">
+        <h4>Những điều anh muốn em nhớ</h4>
+        <p>
+          Em không cần gánh vác tất cả một mình. Có anh — em có thể thở chậm lại, kể chuyện,
+          khóc nếu cần, và cười thật to khi vui. Anh sẽ cố làm chỗ dựa em tin được.
+        </p>
+      </div>
+
+      <div class="words-block">
+        <h4>Về em — Khánh Huyền</h4>
+        <p>
+          Cách em quan tâm người khác, cách em mạnh mẽ, và cả những lúc em giận hay làm anh bất ngờ —
+          tất cả anh đều yêu. Anh không muốn em phải thay đổi để vừa một khuôn mẫu nào. Anh yêu em
+          đang là em.
+        </p>
+      </div>
+
+      <div class="words-block">
+        <h4>Lời hứa nhỏ</h4>
+        <p>
+          Anh hứa sẽ nói thật, xin lỗi khi sai, và cùng em sửa những điều chưa tốt — vì mối quan hệ của
+          hai đứa đáng được giữ bằng cả hai tay, không phải một mình em hay một mình anh.
+        </p>
+      </div>
+
+      <div class="words-block">
+        <h4>Một câu anh có thể nhắc mãi</h4>
+        <p id="quote-rotate"></p>
+      </div>
+      <p class="panel-hint">Bấm lại nút «Lời muốn nói» để xem câu khác — mỗi lần là một lời nhỏ mới từ anh.</p>
+      </div>
+      <div id="quote-birthday-lock" class="birthday-content-lock birthday-content-lock--glass hidden" role="status">
+        <p>Em hãy chờ đến ngày sinh nhật để đọc nhé</p>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="panel-surprise" role="region" aria-live="polite">
+      <h3>Bất ngờ nhỏ từ Đức Anh</h3>
+      <p>Cùng đoán xem bất ngờ là gì nhé...</p>
+      <p class="quote-line">“Chúc mừng sinh nhật &amp; kỷ niệm — của riêng hai đứa mình.”</p>
+    </section>
+
+    <section class="panel hidden" id="panel-countdown" role="region" aria-live="polite">
+      <h3>Đếm ngược</h3>
+      <div class="countdown-row" id="countdown-box"></div>
+    </section>
+
+    <section class="plans-section" aria-labelledby="plans-heading">
+      <p class="plans-intro" id="plans-heading">
+        Kế hoạch theo lộ trình — giờ giấc chỉ để hai đứa dễ bắt nhịp; còn lại cứ chill, không cần gò bó từng phút nhé.
+      </p>
+      <div class="plans-grid">
+        <article class="plan-card">
+          <h2>
+            Ngày sinh nhật em
+            <span class="plan-sub">17/5</span>
+          </h2>
+          <div class="plan-timeline">
+            <div class="plan-slot">
+              <span class="plan-time">12h</span>
+              <p class="plan-desc">Ăn trưa rồi qua homestay <strong>check-in</strong>, ổn định đồ đạc cho cả ngày.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">14:30 – 15:00</span>
+              <p class="plan-desc">Di chuyển tới <strong>Vincom Royal City</strong>.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">15:00 – 17:00</span>
+              <p class="plan-desc">Trượt băng và khu <strong>game arcade</strong> — chơi hết mình một chút.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">18:30 – 20:30</span>
+              <p class="plan-desc">Ăn tối tại <strong>Pizza 4P’s</strong>.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">21:00 – 22:00</span>
+              <p class="plan-desc">Lượn <strong>Hồ Tây</strong>, ghé quán cà phê chill chill.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">23h</span>
+              <p class="plan-desc">Về <strong>homestay</strong> thổi nến — hoặc thổi nến ở quán pub; nếu em muốn đổi không khí thì mình chọn cà phê thay pub cũng được.</p>
+            </div>
+          </div>
+        </article>
+        <article class="plan-card">
+          <h2>
+            Ngày anniversary
+            <span class="plan-sub">24/5</span>
+          </h2>
+          <div class="plan-timeline">
+            <div class="plan-slot">
+              <span class="plan-time">11:30 – 13:30</span>
+              <p class="plan-desc">Ăn trưa và nghỉ ngơi nhẹ nhàng.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">14:00 – 17:00</span>
+              <p class="plan-desc"><strong>Công viên nước Hồ Tây</strong> — tắm nắng, chơi cả buổi.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">17:00 – 18:30</span>
+              <p class="plan-desc">Tắm tráng, lên đồ và kịp đón <strong>hoàng hôn</strong>.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">18:30 – 20:30</span>
+              <p class="plan-desc">Ăn tối lãng mạn mừng anniversary tại <strong>6 Degrees</strong>.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">21:00 – 22:30</span>
+              <p class="plan-desc">Trải nghiệm <strong>Hidden Pub</strong>.</p>
+            </div>
+            <div class="plan-slot">
+              <span class="plan-time">23:00</span>
+              <p class="plan-desc">Kết thúc ngày kỷ niệm — về nghỉ ngơi và cắt bánh...</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Trang này là của <strong>Đức Anh</strong> và <strong>Khánh Huyền</strong>
+      <span class="heart-inline">♥</span><br />
+      Anh làm với tất cả tình yêu — em cứ giữ làm kỷ niệm nhé.
+    </footer>
+  </div>
+
+  <div id="letter-modal" class="letter-modal hidden" role="dialog" aria-modal="true" aria-labelledby="letter-modal-title">
+    <div class="letter-modal-backdrop" id="letter-modal-backdrop" tabindex="-1"></div>
+    <div class="letter-modal-box letter-panel">
+      <div id="letter-body-stack" class="letter-body-stack">
+      <div class="letter-modal-toolbar">
+        <button type="button" class="letter-modal-close" id="letter-modal-close">Đóng</button>
+      </div>
+      <div class="letter-modal-scroll">
+        <div class="letter-head">
+          <div class="letter-head-text">
+            <h3 id="letter-modal-title">Thư gửi em yêu — Khánh Huyền</h3>
+            <p class="letter-meta" id="letter-date-line"></p>
+          </div>
+          <div class="seal" aria-hidden="true">💌</div>
+        </div>
+        <div class="letter-body">
+          <p>
+            Em yêu, khi em đọc những dòng này, anh đang nghĩ về em hoặc anh đang cùng em đọc những dòng này .
+            Sinh nhật 18/05 và kỷ niệm 25/05 không chỉ là hai con số trên lịch. Với anh,
+            đó là những cột mốc khiến anh nhớ mãi, cảm ơn vì em đã đến, và vì em vẫn ở đây.
+          </p>
+          <p>
+            Anh biết đôi khi chúng ta vội vàng, bận rộn với công việc, học tập và không phải lúc nào anh cũng
+            nói được trọn vẹn điều anh muốn nói. Nhưng em hãy tin: em là người anh chọn kể chuyện, chia sẻ, 
+            và xây dựng những kế hoạch cho tương lai. Những ngày có em, anh cảm thấy rất bình yên.
+          </p>
+          <p>
+            Nhân ngày sinh nhật, anh chúc em luôn khỏe mạnh, được yêu thương đúng cách, và được là chính mình —
+            với tất cả sự dịu dàng, mạnh mẽ, hay hờn dỗi mà anh đều trân trọng. Nhân kỷ niệm yêu nhau, anh
+            hứa sẽ cố gắng lắng nghe em nhiều hơn, ôm em chặt hơn khi em mệt, và cùng em giữ cho
+            chuyện tình của hai đứa mình mãi mãi nhé . Anh yêu emmmmmmm nhiều lắm . 
+          </p>
+          <p>
+            Mỗi khi nhớ anh em chỉ cần mở lại trang này và nhớ: anh tự hào về em, biết ơn vì em,
+            và muốn đi cùng em thật lâu. Em luôn đẹp nhất trong mắt anh.
+          </p>
+        </div>
+        <div class="letter-sign">
+          Yêu em nhiều,<br />
+          <span class="name">Đức Anh</span>
+        </div>
+      </div>
+      </div>
+      <div id="letter-birthday-lock" class="birthday-content-lock birthday-content-lock--paper hidden" role="status">
+        <p>Em hãy chờ đến ngày sinh nhật để đọc nhé</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="music-dock" id="music-dock">
+    <audio id="bg-audio" loop preload="auto" playsinline>
+      <source id="bg-audio-source" src="audio/nen-romantic.mp3" type="audio/mpeg" />
+    </audio>
+    <button type="button" id="music-toggle" class="music-toggle" aria-pressed="false" aria-label="Bật hoặc tạm dừng nhạc nền">
+      <span class="music-icon" aria-hidden="true">♪</span>
+      <span class="music-label">Bật nhạc nền</span>
+    </button>
+    <label class="music-vol">
+      <span class="sr-only">Âm lượng nhạc nền</span>
+      <input type="range" id="music-vol" min="0" max="1" step="0.05" value="0.5" />
+    </label>
+  </div>
+
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
+    <button type="button" class="lightbox-close" id="lb-close">Đóng (Esc)</button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Ảnh trước">‹</button>
+    <img id="lb-img" src="" alt="Kỷ niệm — Đức Anh và Khánh Huyền" />
+    <button type="button" class="lightbox-nav lightbox-next" id="lb-next" aria-label="Ảnh sau">›</button>
+    <p class="lightbox-cap" id="lb-cap"></p>
+  </div>
+
+  <script src="memories-photos.js"></script>
+  <script>
+    const CONFIG = {
+      birthYear: 2004,
+      birthMonth: 5,
+      birthDay: 18,
+      anniMonth: 5,
+      anniDay: 25,
+      /** Thư mục ảnh (cùng cấp với index.html). Danh sách file trong memories-photos.js */
+      /** Chỉ dùng chữ ASCII — Netlify/Linux phân biệt hoa/thường; Unicode trong URL dễ lệch khi nén file */
+      photoDir: "photos",
+      /** File MP3 nhạc nền — đặt trong thư mục audio/ */
+      audioSrc: "audio/nen-romantic.mp3",
+      /** Âm lượng mặc định (0–1), ~giữa vừa nghe */
+      musicVolume: 0.5,
+      /**
+       * Thư tay & Lời muốn nói: chỉ đọc rõ khi đã tới thời điểm này (giờ địa phương trên máy em).
+       * Mặc định: 23:59 ngày 17/5 — đổi năm mỗi năm nếu cần.
+       */
+      birthdayReadUnlockYear: 2026,
+      birthdayReadUnlockMonth: 5,
+      birthdayReadUnlockDay: 17,
+      birthdayReadUnlockHour: 23,
+      birthdayReadUnlockMinute: 59,
+      birthdayReadWaitMessage: "Em hãy chờ đến ngày sinh nhật để đọc nhé",
+    };
+
+    function getBirthdayReadUnlockAt() {
+      const y = CONFIG.birthdayReadUnlockYear;
+      const mo = CONFIG.birthdayReadUnlockMonth;
+      const d = CONFIG.birthdayReadUnlockDay;
+      const h = CONFIG.birthdayReadUnlockHour ?? 23;
+      const mi = CONFIG.birthdayReadUnlockMinute ?? 59;
+      return new Date(y, mo - 1, d, h, mi, 0, 0);
+    }
+
+    function isBirthdayReadUnlocked() {
+      return Date.now() >= getBirthdayReadUnlockAt().getTime();
+    }
+
+    function refreshBirthdayReadLocks() {
+      const unlocked = isBirthdayReadUnlocked();
+      const msg = CONFIG.birthdayReadWaitMessage || "Em hãy chờ đến ngày sinh nhật để đọc nhé";
+      const letterLock = document.getElementById("letter-birthday-lock");
+      const letterStack = document.getElementById("letter-body-stack");
+      const quoteLock = document.getElementById("quote-birthday-lock");
+      const quoteInner = document.getElementById("panel-quote-inner");
+      if (letterLock && letterStack) {
+        letterLock.classList.toggle("hidden", unlocked);
+        letterStack.classList.toggle("is-locked", !unlocked);
+        const p = letterLock.querySelector("p");
+        if (p) p.textContent = msg;
+      }
+      if (quoteLock && quoteInner) {
+        quoteLock.classList.toggle("hidden", unlocked);
+        quoteInner.classList.toggle("is-locked", !unlocked);
+        const p = quoteLock.querySelector("p");
+        if (p) p.textContent = msg;
+      }
+    }
+    function hideAlbum() {
+      document.getElementById("ky-niem")?.classList.add("hidden");
+    }
+
+    function closeLetterModal() {
+      const m = document.getElementById("letter-modal");
+      if (!m || m.classList.contains("hidden")) return;
+      m.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function openLetterModal() {
+      hideAlbum();
+      document.querySelectorAll(".panel").forEach((p) => p.classList.add("hidden"));
+      const m = document.getElementById("letter-modal");
+      if (!m) return;
+      m.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+      refreshBirthdayReadLocks();
+    }
+
+    function showAlbumView() {
+      closeLetterModal();
+      document.querySelectorAll(".panel").forEach((p) => p.classList.add("hidden"));
+      const sec = document.getElementById("ky-niem");
+      if (sec) {
+        sec.classList.remove("hidden");
+        sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function nextOccurrence(month, day) {
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      let y = now.getFullYear();
+      let next = new Date(y, month - 1, day);
+      if (next < today) {
+        y++;
+        next = new Date(y, month - 1, day);
+      }
+      const diff = Math.round((next - today) / 86400000);
+      return {
+        days: diff,
+        label: `${String(day).padStart(2, "0")}/${String(month).padStart(2, "0")}/${y}`,
+      };
+    }
+
+    function formatLetterDate(d) {
+      const w = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
+      const m = [
+        "tháng 1",
+        "tháng 2",
+        "tháng 3",
+        "tháng 4",
+        "tháng 5",
+        "tháng 6",
+        "tháng 7",
+        "tháng 8",
+        "tháng 9",
+        "tháng 10",
+        "tháng 11",
+        "tháng 12",
+      ];
+      return `${w[d.getDay()]}, ngày ${d.getDate()} ${m[d.getMonth()]} năm ${d.getFullYear()}`;
+    }
+
+    const now = new Date();
+
+    const letterDateEl = document.getElementById("letter-date-line");
+    if (letterDateEl) {
+      letterDateEl.textContent = formatLetterDate(now) + " · gửi từ trang nhỏ của anh";
+    }
+
+    const quotes = [
+      "Em không cần làm gì thêm — chỉ cần là vogiavogia của anh.",
+      "Mỗi ngày có em đều là ngày anh muốn giữ trong tim.",
+  
+      "18/05 và 25/05 là hai ngày anh muốn ghi nhớ cùng em mãi.",
+      "Dù mai thế nào, hôm nay anh vẫn muốn nói: anh yêu em.",
+    ];
+
+    let quoteIdx = 0;
+    function showRotatingQuote() {
+      const el = document.getElementById("quote-rotate");
+      if (!el) return;
+      el.textContent = quotes[quoteIdx % quotes.length];
+      quoteIdx++;
+    }
+
+    document.getElementById("btn-quote").addEventListener("click", () => {
+      closeLetterModal();
+      hideAlbum();
+      const panel = document.getElementById("panel-quote");
+      const othersHidden = () => {
+        document.querySelectorAll(".panel").forEach((p) => {
+          if (p.id !== "panel-quote") p.classList.add("hidden");
+        });
+      };
+      if (panel.classList.contains("hidden")) {
+        othersHidden();
+        panel.classList.remove("hidden");
+        refreshBirthdayReadLocks();
+        if (isBirthdayReadUnlocked()) {
+          showRotatingQuote();
+        }
+        panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      } else {
+        refreshBirthdayReadLocks();
+        if (isBirthdayReadUnlocked()) {
+          showRotatingQuote();
+        }
+      }
+    });
+
+    function togglePanel(id) {
+      closeLetterModal();
+      hideAlbum();
+      document.querySelectorAll(".panel").forEach((p) => {
+        if (p.id !== id) p.classList.add("hidden");
+      });
+      const p = document.getElementById(id);
+      const wasHidden = p.classList.contains("hidden");
+      p.classList.toggle("hidden");
+      if (wasHidden && !p.classList.contains("hidden")) {
+        p.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }
+
+    document.getElementById("btn-letter").addEventListener("click", () => openLetterModal());
+    document.getElementById("letter-modal-close")?.addEventListener("click", closeLetterModal);
+    document.getElementById("letter-modal-backdrop")?.addEventListener("click", closeLetterModal);
+
+    refreshBirthdayReadLocks();
+    if (!isBirthdayReadUnlocked()) {
+      const lockTimer = setInterval(() => {
+        refreshBirthdayReadLocks();
+        if (isBirthdayReadUnlocked()) clearInterval(lockTimer);
+      }, 15000);
+    }
+
+    document.getElementById("btn-surprise").addEventListener("click", () => {
+      togglePanel("panel-surprise");
+      burstConfetti();
+    });
+    document.getElementById("btn-countdown").addEventListener("click", () => {
+      togglePanel("panel-countdown");
+      const b = nextOccurrence(CONFIG.birthMonth, CONFIG.birthDay);
+      const a = nextOccurrence(CONFIG.anniMonth, CONFIG.anniDay);
+      const box = document.getElementById("countdown-box");
+      box.innerHTML = `
+        <div class="count-pill"><b>Sinh nhật Khánh Huyền tiếp theo</b>${b.days} ngày nữa · ${b.label}</div>
+        <div class="count-pill"><b>Kỷ niệm 25/05 đầu tiên</b>${a.days} ngày nữa · ${a.label}</div>
+      `;
+    });
+    document.getElementById("btn-photos").addEventListener("click", () => showAlbumView());
+
+    function shuffleArray(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    (function initMusic() {
+      const audio = document.getElementById("bg-audio");
+      const source = document.getElementById("bg-audio-source");
+      const btn = document.getElementById("music-toggle");
+      const vol = document.getElementById("music-vol");
+      if (!audio || !btn) return;
+      if (source && CONFIG.audioSrc) source.src = CONFIG.audioSrc;
+      audio.load();
+      const labelEl = btn.querySelector(".music-label");
+      const iconEl = btn.querySelector(".music-icon");
+      const defaultVol =
+        typeof CONFIG.musicVolume === "number" && CONFIG.musicVolume > 0 && CONFIG.musicVolume <= 1
+          ? CONFIG.musicVolume
+          : 0.5;
+
+      function applyComfortVolume() {
+        audio.volume = defaultVol;
+        if (vol) vol.value = String(defaultVol);
+      }
+      applyComfortVolume();
+
+      function syncPlayingUI(playing) {
+        if (playing) {
+          btn.classList.add("is-playing");
+          btn.setAttribute("aria-pressed", "true");
+          if (labelEl) labelEl.textContent = "Tạm dừng nhạc";
+          if (iconEl) iconEl.textContent = "⏸";
+        } else {
+          btn.classList.remove("is-playing");
+          btn.setAttribute("aria-pressed", "false");
+          if (labelEl) labelEl.textContent = "Bật nhạc nền";
+          if (iconEl) iconEl.textContent = "♪";
+        }
+      }
+
+      async function tryAutoplay() {
+        applyComfortVolume();
+        if (!audio.paused) {
+          syncPlayingUI(true);
+          return;
+        }
+        try {
+          audio.muted = false;
+          await audio.play();
+          syncPlayingUI(true);
+          return;
+        } catch (_) {}
+        try {
+          audio.muted = true;
+          await audio.play();
+          setTimeout(() => {
+            audio.muted = false;
+            applyComfortVolume();
+          }, 120);
+          syncPlayingUI(true);
+        } catch (_) {
+          syncPlayingUI(false);
+        }
+      }
+
+      function scheduleAutoplay() {
+        queueMicrotask(() => void tryAutoplay());
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", scheduleAutoplay, { once: true });
+      } else {
+        scheduleAutoplay();
+      }
+      window.addEventListener("load", () => {
+        if (audio.paused) void tryAutoplay();
+      });
+      audio.addEventListener(
+        "canplay",
+        () => {
+          if (audio.paused) void tryAutoplay();
+        },
+        { once: true }
+      );
+      window.addEventListener("pageshow", (e) => {
+        if (e.persisted && audio.paused) void tryAutoplay();
+      });
+
+      function resumeOnFirstGesture() {
+        if (!audio.paused) return;
+        void tryAutoplay();
+      }
+      document.addEventListener("pointerdown", resumeOnFirstGesture, { passive: true, once: true });
+      document.addEventListener("touchstart", resumeOnFirstGesture, { passive: true, once: true });
+      document.addEventListener("keydown", resumeOnFirstGesture, { passive: true, once: true });
+
+      btn.addEventListener("click", async () => {
+        try {
+          applyComfortVolume();
+          if (audio.paused) {
+            audio.muted = false;
+            await audio.play();
+            syncPlayingUI(true);
+          } else {
+            audio.pause();
+            syncPlayingUI(false);
+          }
+        } catch (_) {}
+      });
+
+      vol?.addEventListener("input", () => {
+        audio.volume = parseFloat(vol.value);
+      });
+    })();
+
+    (function initMemories() {
+      const list = (
+        typeof MEMORIES_PHOTOS !== "undefined" && Array.isArray(MEMORIES_PHOTOS) ? MEMORIES_PHOTOS : []
+      ).filter((f) => /\.(jpe?g|png|webp|gif)$/i.test(f));
+      const stripWrap = document.getElementById("hero-strip-wrap");
+      const strip = document.getElementById("hero-filmstrip");
+      const grid = document.getElementById("memory-grid");
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lb-img");
+      const lbCap = document.getElementById("lb-cap");
+      if (!strip || !grid || !lb || !lbImg || !lbCap) return;
+
+      function photoUrl(file) {
+        const rel = `${CONFIG.photoDir}/${file}`.replace(/\\/g, "/").replace(/\/+/g, "/");
+        return rel
+          .split("/")
+          .map((seg) => encodeURIComponent(seg))
+          .join("/");
+      }
+
+      if (list.length === 0) {
+        if (stripWrap) stripWrap.hidden = true;
+        grid.innerHTML =
+          '<p class="memory-empty">Chưa có ảnh JPG/PNG trong thư mục <code>photos</code> (file HEIC không đưa vào album). Thêm ảnh rồi chạy <code>node update-memories-photos.cjs</code> hoặc mở trang qua máy chủ tĩnh.</p>';
+        return;
+      }
+
+      if (stripWrap) stripWrap.hidden = false;
+
+      let lbIndex = 0;
+
+      function setLbImage() {
+        const f = list[lbIndex];
+        lbImg.src = photoUrl(f);
+        lbCap.textContent = `${lbIndex + 1} / ${list.length}`;
+      }
+
+      function openLightbox(file) {
+        lbIndex = list.indexOf(file);
+        if (lbIndex < 0) lbIndex = 0;
+        setLbImage();
+        lb.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLb() {
+        lb.classList.add("hidden");
+        const lm = document.getElementById("letter-modal");
+        document.body.style.overflow = lm && !lm.classList.contains("hidden") ? "hidden" : "";
+      }
+
+      shuffleArray(list)
+        .slice(0, 12)
+        .forEach((f) => {
+          const fig = document.createElement("figure");
+          const img = document.createElement("img");
+          img.src = photoUrl(f);
+          img.alt = "Khoảnh khắc Đức Anh và Khánh Huyền";
+          img.loading = "lazy";
+          img.addEventListener("click", () => openLightbox(f));
+          fig.appendChild(img);
+          strip.appendChild(fig);
+        });
+
+      list.forEach((f, i) => {
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = "memory-card";
+        card.setAttribute("aria-label", `Xem ảnh kỷ niệm ${i + 1}`);
+        const img = document.createElement("img");
+        img.src = photoUrl(f);
+        img.alt = "";
+        img.loading = "lazy";
+        card.appendChild(img);
+        card.addEventListener("click", () => openLightbox(f));
+        grid.appendChild(card);
+      });
+
+      document.getElementById("lb-close")?.addEventListener("click", closeLb);
+      lb.addEventListener("click", (e) => {
+        if (e.target === lb) closeLb();
+      });
+      document.getElementById("lb-prev")?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        lbIndex = (lbIndex - 1 + list.length) % list.length;
+        setLbImage();
+      });
+      document.getElementById("lb-next")?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        lbIndex = (lbIndex + 1) % list.length;
+        setLbImage();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        const lm = document.getElementById("letter-modal");
+        if (e.key === "Escape" && lm && !lm.classList.contains("hidden")) {
+          closeLetterModal();
+          return;
+        }
+        if (lb.classList.contains("hidden")) return;
+        if (e.key === "Escape") closeLb();
+        if (e.key === "ArrowLeft") {
+          lbIndex = (lbIndex - 1 + list.length) % list.length;
+          setLbImage();
+        }
+        if (e.key === "ArrowRight") {
+          lbIndex = (lbIndex + 1) % list.length;
+          setLbImage();
+        }
+      });
+
+    })();
+
+    function burstConfetti() {
+      const n = 52;
+      const colors = ["#ff5c8a", "#f0d78c", "#ffb3d0", "#fff", "#e03d6b"];
+      for (let i = 0; i < n; i++) {
+        const d = document.createElement("div");
+        d.style.cssText = `
+          position:fixed;left:50%;top:35%;width:8px;height:8px;z-index:9999;pointer-events:none;
+          background:${colors[i % colors.length]};border-radius:2px;
+          transform:translate(-50%,-50%) rotate(${Math.random() * 360}deg);
+          animation:cf ${0.8 + Math.random() * 0.6}s ease-out forwards;
+        `;
+        const dx = (Math.random() - 0.5) * 340;
+        const dy = -90 - Math.random() * 240;
+        d.style.setProperty("--dx", dx + "px");
+        d.style.setProperty("--dy", dy + "px");
+        document.body.appendChild(d);
+        setTimeout(() => d.remove(), 1600);
+      }
+      if (!document.getElementById("cf-style")) {
+        const s = document.createElement("style");
+        s.id = "cf-style";
+        s.textContent = `@keyframes cf{to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(720deg);opacity:0}}`;
+        document.head.appendChild(s);
+      }
+    }
+
+    (function initAmbientRotator() {
+      const root = document.getElementById("ambient-bg");
+      if (!root) return;
+      const slabs = Array.from(root.querySelectorAll(".ambient-slab"));
+      if (slabs.length < 2) return;
+
+      const themes = [
+        {
+          cls: "ambient-theme-romantic",
+          orbs: ["rgba(255, 92, 138, 0.22)", "rgba(240, 215, 140, 0.1)"],
+        },
+        {
+          cls: "ambient-theme-anime-sky",
+          orbs: ["rgba(244, 114, 182, 0.26)", "rgba(167, 139, 250, 0.18)"],
+        },
+        {
+          cls: "ambient-theme-sakura",
+          orbs: ["rgba(251, 182, 206, 0.2)", "rgba(255, 228, 240, 0.12)"],
+        },
+        {
+          cls: "ambient-theme-golden-hour",
+          orbs: ["rgba(251, 113, 133, 0.2)", "rgba(250, 204, 21, 0.14)"],
+        },
+        {
+          cls: "ambient-theme-anime-night",
+          orbs: ["rgba(56, 189, 248, 0.18)", "rgba(232, 121, 249, 0.16)"],
+        },
+        {
+          cls: "ambient-theme-aurora",
+          orbs: ["rgba(52, 211, 153, 0.18)", "rgba(167, 139, 250, 0.2)"],
+        },
+      ];
+
+      function setOrbs(t) {
+        document.documentElement.style.setProperty("--orb-a", t.orbs[0]);
+        document.documentElement.style.setProperty("--orb-b", t.orbs[1]);
+      }
+
+      let themeIndex = 0;
+      let visibleLayer = 0;
+      setOrbs(themes[0]);
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion) {
+        slabs[0].className = "ambient-slab " + themes[0].cls + " is-visible";
+        slabs[1].className = "ambient-slab " + themes[0].cls;
+        return;
+      }
+
+      slabs[1].className = "ambient-slab " + themes[1].cls;
+
+      function advance() {
+        const nextIdx = (themeIndex + 1) % themes.length;
+        const incoming = 1 - visibleLayer;
+        const t = themes[nextIdx];
+        slabs[incoming].className = "ambient-slab " + t.cls;
+        slabs[incoming].classList.add("is-visible");
+        slabs[visibleLayer].classList.remove("is-visible");
+        visibleLayer = incoming;
+        themeIndex = nextIdx;
+        setOrbs(t);
+      }
+
+      window.setInterval(advance, 14000);
+    })();
+
+    (function heartsCanvas() {
+      const c = document.getElementById("hearts-canvas");
+      const ctx = c.getContext("2d");
+      let w, h, items;
+
+      function resize() {
+        w = c.width = innerWidth;
+        h = c.height = innerHeight;
+      }
+
+      function reset() {
+        items = Array.from({ length: Math.min(52, Math.floor(w / 24)) }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          s: 0.5 + Math.random() * 1.15,
+          sp: 0.28 + Math.random() * 0.85,
+          o: 0.14 + Math.random() * 0.32,
+          hue: 318 + Math.random() * 45,
+        }));
+      }
+
+      function heartPath(cx, cy, size) {
+        ctx.beginPath();
+        const topY = cy - size * 0.3;
+        ctx.moveTo(cx, cy + size * 0.35);
+        ctx.bezierCurveTo(cx - size, cy - size * 0.2, cx - size * 0.85, topY, cx, topY + size * 0.25);
+        ctx.bezierCurveTo(cx + size * 0.85, topY, cx + size, cy - size * 0.2, cx, cy + size * 0.35);
+        ctx.closePath();
+      }
+
+      function tick() {
+        ctx.clearRect(0, 0, w, h);
+        for (const it of items) {
+          it.y -= it.sp;
+          if (it.y < -40) {
+            it.y = h + 20;
+            it.x = Math.random() * w;
+          }
+          ctx.save();
+          ctx.globalAlpha = it.o;
+          ctx.fillStyle = `hsla(${it.hue}, 82%, 70%, 1)`;
+          heartPath(it.x, it.y, 14 * it.s);
+          ctx.fill();
+          ctx.restore();
+        }
+        requestAnimationFrame(tick);
+      }
+
+      resize();
+      reset();
+      window.addEventListener("resize", () => {
+        resize();
+        reset();
+      });
+      tick();
+    })();
+  </script>
+</body>
+</html>
