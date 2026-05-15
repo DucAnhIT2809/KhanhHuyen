@@ -641,6 +641,13 @@
       animation: fadeUp 0.9s ease-out 0.35s both;
     }
 
+    .plans-section.plans-locked .plans-blur-target {
+      filter: blur(11px);
+      opacity: 0.55;
+      user-select: none;
+      pointer-events: none;
+    }
+
     .plans-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1182,6 +1189,7 @@
       width: min(140px, 40vw);
       accent-color: var(--rose);
     }
+
   </style>
 </head>
 <body>
@@ -1295,11 +1303,11 @@
       <div class="countdown-row" id="countdown-box"></div>
     </section>
 
-    <section class="plans-section" aria-labelledby="plans-heading">
+    <section class="plans-section plans-locked" id="plans-section" aria-labelledby="plans-heading">
       <p class="plans-intro" id="plans-heading">
         Kế hoạch theo lộ trình của anh với em nhé hihi.
       </p>
-      <div class="plans-grid">
+      <div class="plans-grid plans-blur-target" id="plans-blur-target">
         <article class="plan-card">
           <h2>
             Ngày sinh nhật em
@@ -1461,7 +1469,47 @@
       birthdayReadUnlockHour: 23,
       birthdayReadUnlockMinute: 59,
       birthdayReadWaitMessage: "Em hãy chờ đến ngày sinh nhật để đọc nhé",
+      /** Mã trong link private xem kế hoạch: ?plan=... — đổi thành chuỗi riêng của bạn */
+      plansPrivateKey: "khuyen-kehoach-2026",
+      plansPrivateParam: "plan",
     };
+
+    const PLANS_ACCESS_KEY = "khanh_huyen_plans_unlock";
+
+    function initPlansPrivateAccess() {
+      const section = document.getElementById("plans-section");
+      const target = document.getElementById("plans-blur-target");
+      const key = CONFIG.plansPrivateKey;
+      if (!section || !key) return;
+
+      const param = CONFIG.plansPrivateParam || "plan";
+      const fromUrl = new URLSearchParams(location.search).get(param);
+      if (fromUrl && fromUrl === key) {
+        try {
+          sessionStorage.setItem(PLANS_ACCESS_KEY, fromUrl);
+        } catch (_) {}
+        if (history.replaceState) {
+          const u = new URL(location.href);
+          u.searchParams.delete(param);
+          history.replaceState(null, "", u.pathname + u.search + u.hash);
+        }
+      }
+
+      let unlocked = false;
+      try {
+        unlocked = sessionStorage.getItem(PLANS_ACCESS_KEY) === key;
+      } catch (_) {}
+
+      if (unlocked) {
+        section.classList.remove("plans-locked");
+        if (target) target.removeAttribute("aria-hidden");
+      } else {
+        section.classList.add("plans-locked");
+        if (target) target.setAttribute("aria-hidden", "true");
+      }
+    }
+
+    initPlansPrivateAccess();
 
     /**
      * Ảnh / nhạc: luôn resolve đúng khi site nằm trong thư mục con (GitHub Pages dạng /TênRepo/)
