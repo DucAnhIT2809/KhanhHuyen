@@ -1495,7 +1495,7 @@
       </div>
       <div class="memories-head">
         <h2 id="memories-title">Album ảnh — lưu giữ kỷ niệm</h2>
-        <p class="memories-sub" id="memories-sub">Em bấm từng ảnh hoặc video để xem nhé .</p>
+        <p class="memories-sub" id="memories-sub">Em bấm từng ảnh để xem nhé.</p>
       </div>
       <div class="memory-grid" id="memory-grid"></div>
     </section>
@@ -2160,10 +2160,8 @@
         return;
       }
 
-      const imgCount = list.filter((m) => m.type === "image").length;
-      const vidCount = list.filter((m) => m.type === "video").length;
       if (subEl) {
-        subEl.textContent = `Em bấm từng ô để xem — ${list.length} khoảnh khắc (${imgCount} ảnh${vidCount ? `, ${vidCount} video` : ""}) từ Photofinal.`;
+        subEl.textContent = "Em bấm từng ảnh để xem nhé.";
       }
 
       if (stripWrap) stripWrap.hidden = false;
