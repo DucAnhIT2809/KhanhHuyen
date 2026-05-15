@@ -876,6 +876,204 @@
       margin-bottom: 0.22rem;
     }
 
+    .surprise-game-trigger {
+      appearance: none;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: underline;
+      text-decoration-color: var(--rose-soft);
+      text-underline-offset: 5px;
+      cursor: pointer;
+      line-height: 1.25;
+    }
+
+    .surprise-game-trigger:hover {
+      color: var(--rose-soft);
+    }
+
+    .surprise-game-trigger:focus-visible {
+      outline: 2px solid var(--rose-soft);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    #panel-surprise {
+      position: relative;
+      padding-bottom: 2.1rem;
+    }
+
+    .surprise-play-hint {
+      position: absolute;
+      right: 0.85rem;
+      bottom: 0.65rem;
+      margin: 0;
+      max-width: none;
+      font-size: 8px;
+      line-height: 1;
+      text-align: right;
+      white-space: nowrap;
+      color: rgba(255, 247, 250, 0.32);
+      letter-spacing: 0;
+    }
+
+    .flappy-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 230;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+
+    .flappy-modal.hidden {
+      display: none;
+    }
+
+    .flappy-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 3, 6, 0.82);
+      backdrop-filter: blur(6px);
+    }
+
+    .flappy-modal-box {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 400px);
+      background: linear-gradient(165deg, rgba(30, 14, 22, 0.96), rgba(20, 8, 16, 0.98));
+      border: 1px solid var(--glass-border);
+      border-radius: 1.1rem;
+      padding: 0.75rem 0.85rem 1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .flappy-modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .flappy-modal-head h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.2rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .flappy-modal-close {
+      appearance: none;
+      border: 1px solid var(--glass-border);
+      background: rgba(0, 0, 0, 0.35);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .flappy-canvas-wrap {
+      position: relative;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #1a0c14;
+    }
+
+    #flappy-canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      touch-action: manipulation;
+    }
+
+    .flappy-hud {
+      position: absolute;
+      top: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .flappy-hint {
+      margin: 0.55rem 0 0;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .flappy-win-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 240;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .flappy-win-modal.hidden {
+      display: none;
+    }
+
+    .flappy-win-card {
+      position: relative;
+      z-index: 1;
+      max-width: 22rem;
+      text-align: center;
+      padding: 1.75rem 1.35rem;
+      border-radius: 1.15rem;
+      background: linear-gradient(150deg, rgba(255, 92, 138, 0.15), rgba(30, 14, 22, 0.95));
+      border: 1px solid rgba(255, 179, 208, 0.35);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .flappy-win-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.45rem;
+      color: var(--gold);
+      margin-bottom: 0.65rem;
+    }
+
+    .flappy-win-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .flappy-win-card button {
+      margin-top: 1rem;
+      appearance: none;
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1.15rem;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      background: linear-gradient(180deg, var(--btn-pink-top), var(--btn-pink-deep));
+      color: var(--btn-pink-text);
+    }
+
     .panel-hint {
       font-size: 0.82rem;
       color: rgba(255, 247, 250, 0.62);
@@ -925,7 +1123,8 @@
       scroll-snap-align: center;
     }
 
-    .hero-filmstrip img {
+    .hero-filmstrip img,
+    .hero-filmstrip video {
       height: clamp(96px, 22vw, 132px);
       width: auto;
       max-width: min(200px, 42vw);
@@ -938,9 +1137,16 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .hero-filmstrip img:hover {
+    .hero-filmstrip img:hover,
+    .hero-filmstrip video:hover {
       transform: scale(1.03);
       box-shadow: 0 16px 40px rgba(255, 92, 138, 0.2);
+    }
+
+    .hero-filmstrip img.img-load-failed,
+    .memory-card img.img-load-failed {
+      opacity: 0.35;
+      object-fit: contain;
     }
 
     .memories {
@@ -969,23 +1175,31 @@
     }
 
     .memory-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 0.65rem;
+      column-count: 2;
+      column-gap: 0.7rem;
     }
 
-    @media (min-width: 520px) {
+    @media (min-width: 560px) {
       .memory-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        column-count: 3;
+        column-gap: 0.8rem;
+      }
+    }
+
+    @media (min-width: 880px) {
+      .memory-grid {
+        column-count: 4;
+        column-gap: 0.85rem;
       }
     }
 
     .memory-card {
       position: relative;
-      border-radius: 0.85rem;
+      break-inside: avoid;
+      margin-bottom: 0.7rem;
+      border-radius: 0.9rem;
       overflow: hidden;
       border: 1px solid var(--glass-border);
-      aspect-ratio: 3 / 4;
       background: rgba(0, 0, 0, 0.35);
       cursor: pointer;
       transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s;
@@ -995,34 +1209,55 @@
       color: inherit;
       display: block;
       width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
     }
 
     .memory-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       border-color: rgba(255, 179, 208, 0.45);
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 16px 40px rgba(255, 92, 138, 0.15);
     }
 
-    .memory-card img {
+    .memory-card img,
+    .memory-card video {
       width: 100%;
-      height: 100%;
+      height: auto;
+      min-height: 100px;
+      max-height: 320px;
       object-fit: cover;
       display: block;
+      vertical-align: middle;
       background: rgba(30, 12, 20, 0.6);
     }
 
-    .memory-card::after {
+    .memory-card.is-video::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 55%, rgba(20, 8, 16, 0.55));
-      opacity: 0;
-      transition: opacity 0.2s;
+      background: linear-gradient(180deg, transparent 40%, rgba(20, 8, 16, 0.35));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .memory-card-badge {
+      position: absolute;
+      left: 0.5rem;
+      bottom: 0.5rem;
+      z-index: 2;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.5rem;
+      border-radius: 0.35rem;
+      background: rgba(0, 0, 0, 0.55);
+      color: var(--rose-soft);
+      border: 1px solid rgba(255, 179, 208, 0.35);
       pointer-events: none;
     }
 
-    .memory-card:hover::after {
-      opacity: 1;
+    .memory-card-badge.is-play::after {
+      content: " ▶";
     }
 
     .memory-empty {
@@ -1050,15 +1285,31 @@
       display: none;
     }
 
-    .lightbox img {
+    .lightbox-media {
       max-width: min(96vw, 1100px);
       max-height: 88vh;
+      width: auto;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox img.lightbox-media,
+    .lightbox video.lightbox-media {
       width: auto;
       height: auto;
       object-fit: contain;
       border-radius: 0.5rem;
       box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
       background: rgba(20, 8, 16, 0.5);
+    }
+
+    .lightbox video.lightbox-media {
+      max-height: min(80vh, 720px);
+    }
+
+    .lightbox-media.hidden {
+      display: none !important;
     }
 
     .lightbox-close {
@@ -1244,7 +1495,7 @@
       </div>
       <div class="memories-head">
         <h2 id="memories-title">Album ảnh — lưu giữ kỷ niệm</h2>
-        <p class="memories-sub">Em bấm từng ảnh để xem nhé hihi, và nhớ nghe lời bài hát nữa nhé. Đố em tại sao có 78 ảnh đó. </p>
+        <p class="memories-sub" id="memories-sub">Em bấm từng ảnh hoặc video để xem nhé .</p>
       </div>
       <div class="memory-grid" id="memory-grid"></div>
     </section>
@@ -1293,9 +1544,14 @@
     </section>
 
     <section class="panel hidden" id="panel-surprise" role="region" aria-live="polite">
-      <h3>Bất ngờ nhỏ từ Đức Anh</h3>
+      <h3>
+        <button type="button" class="surprise-game-trigger" id="surprise-game-open">
+          Bất ngờ nhỏ từ Đức Anh
+        </button>
+      </h3>
       <p>Cùng đoán xem bất ngờ là gì nhé...</p>
       <p class="quote-line">“Chúc mừng sinh nhật &amp; kỷ niệm — của riêng hai đứa mình.”</p>
+      <p class="surprise-play-hint">Bấm dòng chữ gạch chân phía trên để chơi mini game.</p>
     </section>
 
     <section class="panel hidden" id="panel-countdown" role="region" aria-live="polite">
@@ -1436,15 +1692,43 @@
     </label>
   </div>
 
+  <div id="flappy-modal" class="flappy-modal hidden" role="dialog" aria-modal="true" aria-labelledby="flappy-modal-title" tabindex="-1">
+    <div class="flappy-modal-backdrop" id="flappy-modal-backdrop" tabindex="-1"></div>
+    <div class="flappy-modal-box">
+      <div class="flappy-modal-head">
+        <h3 id="flappy-modal-title">Bay vượt cột — Flappy</h3>
+        <button type="button" class="flappy-modal-close" id="flappy-modal-close">Đóng</button>
+      </div>
+      <div class="flappy-canvas-wrap">
+        <span class="flappy-hud" id="flappy-score">0 / 10</span>
+        <canvas id="flappy-canvas" width="360" height="520" aria-label="Mini game Flappy"></canvas>
+      </div>
+      <p class="flappy-hint">Hoàn thành thử thách để nhận bất ngờ · chạm hoặc Space để bay</p>
+    </div>
+  </div>
+
+  <div id="flappy-win-modal" class="flappy-win-modal hidden" role="dialog" aria-modal="true" aria-labelledby="flappy-win-title">
+    <div class="flappy-modal-backdrop" id="flappy-win-backdrop" tabindex="-1"></div>
+    <div class="flappy-win-card">
+      <h3 id="flappy-win-title">🎉 Tuyệt vời!</h3>
+      <p>
+        Cảm ơn bạn đã donate cho Đức Anh và Khánh Huyền 10.000đ. Số tiền sẽ trừ trực tiếp từ
+        điện thoại này.
+      </p>
+      <button type="button" id="flappy-win-close">Đóng</button>
+    </div>
+  </div>
+
   <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
     <button type="button" class="lightbox-close" id="lb-close">Đóng (Esc)</button>
     <button type="button" class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Ảnh trước">‹</button>
-    <img id="lb-img" src="" alt="Kỷ niệm — Đức Anh và Khánh Huyền" />
+    <img id="lb-img" class="lightbox-media hidden" src="" alt="Kỷ niệm — Đức Anh và Khánh Huyền" />
+    <video id="lb-video" class="lightbox-media hidden" controls playsinline preload="metadata"></video>
     <button type="button" class="lightbox-nav lightbox-next" id="lb-next" aria-label="Ảnh sau">›</button>
     <p class="lightbox-cap" id="lb-cap"></p>
   </div>
 
-  <script src="memories-photos.js"></script>
+  <script src="memories-photos.js?v=89-mp79vl22"></script>
   <script>
     const CONFIG = {
       birthYear: 2004,
@@ -1454,7 +1738,7 @@
       anniDay: 25,
       /** Thư mục ảnh (cùng cấp với index.html). Danh sách file trong memories-photos.js */
       /** Chỉ dùng chữ ASCII — Netlify/Linux phân biệt hoa/thường; Unicode trong URL dễ lệch khi nén file */
-      photoDir: "photos",
+      photoDir: "Photofinal",
       /** File MP3 nhạc nền — đặt trong thư mục audio/ */
       audioSrc: "audio/nen-romantic.mp3",
       /** Âm lượng mặc định (0–1), ~giữa vừa nghe */
@@ -1472,6 +1756,9 @@
       /** Mã trong link private xem kế hoạch: ?plan=... — đổi thành chuỗi riêng của bạn */
       plansPrivateKey: "khuyen-kehoach-2026",
       plansPrivateParam: "plan",
+      /** Ảnh làm “chim” trong mini game (file trong Photofinal/) */
+      flappyBirdPhoto: "7EDF2963-A024-476A-971C-EADE00FFB1AC.JPG",
+      flappyWinScore: 10,
     };
 
     const PLANS_ACCESS_KEY = "khanh_huyen_plans_unlock";
@@ -1840,78 +2127,167 @@
     })();
 
     (function initMemories() {
-      const list = (
-        typeof MEMORIES_PHOTOS !== "undefined" && Array.isArray(MEMORIES_PHOTOS) ? MEMORIES_PHOTOS : []
-      ).filter((f) => /\.(jpe?g|png|webp|gif)$/i.test(f));
+      function normalizeMediaList() {
+        if (typeof MEMORIES_MEDIA !== "undefined" && Array.isArray(MEMORIES_MEDIA)) {
+          return MEMORIES_MEDIA.map((m) =>
+            typeof m === "string"
+              ? { file: m, type: /\.(mp4|mov|webm)$/i.test(m) ? "video" : "image" }
+              : { file: m.file, type: m.type || "image" }
+          );
+        }
+        return [];
+      }
+
+      const list = normalizeMediaList();
       const stripWrap = document.getElementById("hero-strip-wrap");
       const strip = document.getElementById("hero-filmstrip");
       const grid = document.getElementById("memory-grid");
+      const subEl = document.getElementById("memories-sub");
       const lb = document.getElementById("lightbox");
       const lbImg = document.getElementById("lb-img");
+      const lbVideo = document.getElementById("lb-video");
       const lbCap = document.getElementById("lb-cap");
       if (!strip || !grid || !lb || !lbImg || !lbCap) return;
 
-      function photoUrl(file) {
+      function mediaUrl(file) {
         return assetUrl(`${CONFIG.photoDir}/${file}`.replace(/\/+/g, "/"));
       }
 
       if (list.length === 0) {
         if (stripWrap) stripWrap.hidden = true;
         grid.innerHTML =
-          '<p class="memory-empty">Chưa có ảnh JPG/PNG trong thư mục <code>photos</code> (file HEIC không đưa vào album). Thêm ảnh rồi chạy <code>node update-memories-photos.cjs</code> hoặc mở trang qua máy chủ tĩnh.</p>';
+          '<p class="memory-empty">Chưa có ảnh/video trong <code>Photofinal</code>. Thêm file rồi chạy <code>node update-memories-photos.cjs</code>.</p>';
         return;
+      }
+
+      const imgCount = list.filter((m) => m.type === "image").length;
+      const vidCount = list.filter((m) => m.type === "video").length;
+      if (subEl) {
+        subEl.textContent = `Em bấm từng ô để xem — ${list.length} khoảnh khắc (${imgCount} ảnh${vidCount ? `, ${vidCount} video` : ""}) từ Photofinal.`;
       }
 
       if (stripWrap) stripWrap.hidden = false;
 
       let lbIndex = 0;
+      let lbVideoSrc = "";
 
-      function setLbImage() {
-        const f = list[lbIndex];
-        lbImg.src = photoUrl(f);
-        lbCap.textContent = `${lbIndex + 1} / ${list.length}`;
+      function pauseLbVideo() {
+        if (!lbVideo) return;
+        lbVideo.pause();
+        if (lbVideoSrc) {
+          lbVideo.removeAttribute("src");
+          lbVideo.load();
+          lbVideoSrc = "";
+        }
       }
 
-      function openLightbox(file) {
-        lbIndex = list.indexOf(file);
+      function setLbMedia() {
+        const item = list[lbIndex];
+        if (!item) return;
+        const url = mediaUrl(item.file);
+        if (item.type === "video" && lbVideo) {
+          lbImg.classList.add("hidden");
+          lbVideo.classList.remove("hidden");
+          if (lbVideoSrc !== url) {
+            lbVideoSrc = url;
+            lbVideo.src = url;
+            lbVideo.load();
+          }
+        } else {
+          pauseLbVideo();
+          lbVideo?.classList.add("hidden");
+          lbImg.classList.remove("hidden");
+          lbImg.src = url;
+        }
+        const kind = item.type === "video" ? "Video" : "Ảnh";
+        lbCap.textContent = `${lbIndex + 1} / ${list.length} · ${kind}`;
+      }
+
+      function openLightbox(item) {
+        lbIndex = list.findIndex((m) => m.file === item.file);
         if (lbIndex < 0) lbIndex = 0;
-        setLbImage();
+        setLbMedia();
         lb.classList.remove("hidden");
         document.body.style.overflow = "hidden";
+        if (list[lbIndex]?.type === "video" && lbVideo) lbVideo.play().catch(() => {});
       }
 
       function closeLb() {
+        pauseLbVideo();
         lb.classList.add("hidden");
         const lm = document.getElementById("letter-modal");
         document.body.style.overflow = lm && !lm.classList.contains("hidden") ? "hidden" : "";
       }
 
-      shuffleArray(list)
-        .slice(0, 12)
-        .forEach((f, i) => {
-          const fig = document.createElement("figure");
+      function bindImgError(img) {
+        img.addEventListener("error", () => {
+          img.classList.add("img-load-failed");
+        }, { once: true });
+      }
+
+      function buildCardThumb(card, item, eager) {
+        const url = mediaUrl(item.file);
+        if (item.type === "video") {
+          card.classList.add("is-video");
+          const vid = document.createElement("video");
+          vid.src = url;
+          vid.muted = true;
+          vid.playsInline = true;
+          vid.preload = "metadata";
+          vid.setAttribute("playsinline", "");
+          card.appendChild(vid);
+          const badge = document.createElement("span");
+          badge.className = "memory-card-badge is-play";
+          badge.textContent = "Video";
+          card.appendChild(badge);
+        } else {
           const img = document.createElement("img");
-          img.src = photoUrl(f);
-          img.alt = "Khoảnh khắc Đức Anh và Khánh Huyền";
-          img.loading = i < 6 ? "eager" : "lazy";
+          img.src = url;
+          img.alt = "";
+          img.loading = eager ? "eager" : "lazy";
           img.decoding = "async";
-          img.addEventListener("click", () => openLightbox(f));
-          fig.appendChild(img);
+          bindImgError(img);
+          card.appendChild(img);
+        }
+      }
+
+      const STRIP_MAX_BYTES = 10 * 1024 * 1024;
+      let stripPool = list.filter(
+        (m) => m.type === "image" && (m.bytes == null || m.bytes <= STRIP_MAX_BYTES)
+      );
+      if (stripPool.length < 6) stripPool = list.filter((m) => m.type === "image");
+      shuffleArray(stripPool.length ? stripPool : list)
+        .slice(0, 12)
+        .forEach((item, i) => {
+          const fig = document.createElement("figure");
+          const url = mediaUrl(item.file);
+          if (item.type === "video") {
+            const vid = document.createElement("video");
+            vid.src = url;
+            vid.muted = true;
+            vid.playsInline = true;
+            vid.preload = "metadata";
+            fig.appendChild(vid);
+          } else {
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = "Khoảnh khắc Đức Anh và Khánh Huyền";
+            img.loading = i < 6 ? "eager" : "lazy";
+            bindImgError(img);
+            fig.appendChild(img);
+          }
+          fig.addEventListener("click", () => openLightbox(item));
           strip.appendChild(fig);
         });
 
-      list.forEach((f, i) => {
+      list.forEach((item, i) => {
         const card = document.createElement("button");
         card.type = "button";
-        card.className = "memory-card";
-        card.setAttribute("aria-label", `Xem ảnh kỷ niệm ${i + 1}`);
-        const img = document.createElement("img");
-        img.src = photoUrl(f);
-        img.alt = "";
-        img.loading = i < 9 ? "eager" : "lazy";
-        img.decoding = "async";
-        card.appendChild(img);
-        card.addEventListener("click", () => openLightbox(f));
+        card.className = "memory-card" + (item.type === "video" ? " is-video" : "");
+        const label = item.type === "video" ? `Xem video kỷ niệm ${i + 1}` : `Xem ảnh kỷ niệm ${i + 1}`;
+        card.setAttribute("aria-label", label);
+        buildCardThumb(card, item, i < 9);
+        card.addEventListener("click", () => openLightbox(item));
         grid.appendChild(card);
       });
 
@@ -1922,12 +2298,14 @@
       document.getElementById("lb-prev")?.addEventListener("click", (e) => {
         e.stopPropagation();
         lbIndex = (lbIndex - 1 + list.length) % list.length;
-        setLbImage();
+        setLbMedia();
+        if (list[lbIndex]?.type === "video" && lbVideo) lbVideo.play().catch(() => {});
       });
       document.getElementById("lb-next")?.addEventListener("click", (e) => {
         e.stopPropagation();
         lbIndex = (lbIndex + 1) % list.length;
-        setLbImage();
+        setLbMedia();
+        if (list[lbIndex]?.type === "video" && lbVideo) lbVideo.play().catch(() => {});
       });
 
       document.addEventListener("keydown", (e) => {
@@ -1940,14 +2318,240 @@
         if (e.key === "Escape") closeLb();
         if (e.key === "ArrowLeft") {
           lbIndex = (lbIndex - 1 + list.length) % list.length;
-          setLbImage();
+          setLbMedia();
+          if (list[lbIndex]?.type === "video" && lbVideo) lbVideo.play().catch(() => {});
         }
         if (e.key === "ArrowRight") {
           lbIndex = (lbIndex + 1) % list.length;
-          setLbImage();
+          setLbMedia();
+          if (list[lbIndex]?.type === "video" && lbVideo) lbVideo.play().catch(() => {});
         }
       });
+    })();
 
+    (function initFlappySurprise() {
+      const openBtn = document.getElementById("surprise-game-open");
+      const modal = document.getElementById("flappy-modal");
+      const backdrop = document.getElementById("flappy-modal-backdrop");
+      const closeBtn = document.getElementById("flappy-modal-close");
+      const canvas = document.getElementById("flappy-canvas");
+      const scoreEl = document.getElementById("flappy-score");
+      const winModal = document.getElementById("flappy-win-modal");
+      const winClose = document.getElementById("flappy-win-close");
+      const winBackdrop = document.getElementById("flappy-win-backdrop");
+      if (!openBtn || !modal || !canvas) return;
+
+      const ctx = canvas.getContext("2d");
+      const W = canvas.width;
+      const H = canvas.height;
+      const GOAL = CONFIG.flappyWinScore ?? 10;
+      const birdImg = new Image();
+      const mediaList =
+        typeof MEMORIES_MEDIA !== "undefined" && Array.isArray(MEMORIES_MEDIA)
+          ? MEMORIES_MEDIA
+          : [];
+      const birdFile =
+        CONFIG.flappyBirdPhoto ||
+        mediaList.find((m) => m.type === "image" && /\.jpe?g$/i.test(m.file))?.file ||
+        mediaList.find((m) => m.type === "image")?.file ||
+        "";
+      if (birdFile) birdImg.src = assetUrl(`${CONFIG.photoDir}/${birdFile}`);
+
+      const GRAVITY = 0.28;
+      const FLAP = -5.6;
+      const PIPE_W = 52;
+      const GAP = 172;
+      const PIPE_SPACING = 255;
+      const HIT_PAD = 6;
+
+      let state = "idle";
+      let score = 0;
+      let raf = 0;
+      let bird;
+      let pipes;
+      let speed;
+
+      function makePipe(x) {
+        const minTop = 52;
+        const maxTop = H - GAP - 68;
+        const gapY = minTop + Math.random() * (maxTop - minTop);
+        return { x, gapY, scored: false };
+      }
+
+      function updateScoreHud() {
+        if (scoreEl) scoreEl.textContent = `${score} / ${GOAL}`;
+      }
+
+      function resetGame() {
+        score = 0;
+        state = "ready";
+        speed = 1.65;
+        bird = { x: 88, y: H * 0.45, vy: 0, r: 26, hitR: 20, rot: 0 };
+        pipes = [makePipe(W + 80)];
+        updateScoreHud();
+      }
+
+      function openGame() {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        resetGame();
+        loop();
+        modal.focus?.();
+      }
+
+      function closeGame() {
+        modal.classList.add("hidden");
+        state = "idle";
+        cancelAnimationFrame(raf);
+        raf = 0;
+        const lm = document.getElementById("letter-modal");
+        document.body.style.overflow = lm && !lm.classList.contains("hidden") ? "hidden" : "";
+      }
+
+      function showWin() {
+        state = "won";
+        winModal?.classList.remove("hidden");
+        burstConfetti();
+      }
+
+      function flap() {
+        if (state === "ready" || state === "playing") {
+          bird.vy = FLAP;
+          if (state === "ready") state = "playing";
+        } else if (state === "dead") {
+          resetGame();
+          state = "playing";
+          bird.vy = FLAP;
+        }
+      }
+
+      function collide(b, p) {
+        const hr = (b.hitR ?? b.r) - HIT_PAD;
+        const bx1 = b.x - hr;
+        const bx2 = b.x + hr;
+        const by1 = b.y - hr;
+        const by2 = b.y + hr;
+        const px1 = p.x + 4;
+        const px2 = p.x + PIPE_W - 4;
+        if (bx2 < px1 || bx1 > px2) return false;
+        if (by1 < p.gapY + 6) return true;
+        if (by2 > p.gapY + GAP - 6) return true;
+        return false;
+      }
+
+      function drawPipe(p) {
+        ctx.fillStyle = "#4a2034";
+        ctx.strokeStyle = "rgba(255, 179, 208, 0.5)";
+        ctx.lineWidth = 2;
+        ctx.fillRect(p.x, 0, PIPE_W, p.gapY);
+        ctx.strokeRect(p.x + 1, 1, PIPE_W - 2, Math.max(0, p.gapY - 2));
+        const botY = p.gapY + GAP;
+        ctx.fillRect(p.x, botY, PIPE_W, H - botY);
+        ctx.strokeRect(p.x + 1, botY + 1, PIPE_W - 2, H - botY - 2);
+        ctx.fillStyle = "#7a3350";
+        const capH = 14;
+        ctx.fillRect(p.x - 4, p.gapY - capH, PIPE_W + 8, capH);
+        ctx.fillRect(p.x - 4, p.gapY + GAP, PIPE_W + 8, capH);
+      }
+
+      function drawBird() {
+        ctx.save();
+        ctx.translate(bird.x, bird.y);
+        ctx.rotate(bird.rot);
+        ctx.beginPath();
+        ctx.arc(0, 0, bird.r, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+        if (birdImg.complete && birdImg.naturalWidth) {
+          const sz = bird.r * 2.25;
+          ctx.drawImage(birdImg, -sz / 2, -sz / 2, sz, sz);
+        } else {
+          ctx.fillStyle = "#ffb3d0";
+          ctx.fill();
+        }
+        ctx.restore();
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.4)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(bird.x, bird.y, bird.r, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+      function draw() {
+        const bg = ctx.createLinearGradient(0, 0, 0, H);
+        bg.addColorStop(0, "#2a1428");
+        bg.addColorStop(1, "#140810");
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, W, H);
+        for (const p of pipes) drawPipe(p);
+        drawBird();
+        ctx.fillStyle = "rgba(255, 247, 250, 0.9)";
+        ctx.font = "600 17px Manrope, system-ui, sans-serif";
+        ctx.textAlign = "center";
+        if (state === "ready") {
+          ctx.font = "600 15px Manrope, system-ui, sans-serif";
+          ctx.fillText("Hoàn thành thử thách để nhận bất ngờ", W / 2, H * 0.28);
+          ctx.font = "600 17px Manrope, system-ui, sans-serif";
+          ctx.fillText("Chạm / Space để bay", W / 2, H * 0.36);
+        }
+        else if (state === "dead") ctx.fillText("Thua rồi — chạm để chơi lại", W / 2, H * 0.32);
+      }
+
+      function tick() {
+        if (state === "playing") {
+          bird.vy += GRAVITY;
+          bird.y += bird.vy;
+          bird.rot = Math.min(Math.PI / 5, Math.max(-0.4, bird.vy * 0.05));
+          for (const p of pipes) p.x -= speed;
+          if (pipes[pipes.length - 1].x < W - PIPE_SPACING) pipes.push(makePipe(W + 24));
+          while (pipes.length && pipes[0].x < -PIPE_W - 12) pipes.shift();
+          for (const p of pipes) {
+            if (!p.scored && bird.x > p.x + PIPE_W) {
+              p.scored = true;
+              score++;
+              updateScoreHud();
+              if (score >= GOAL) {
+                showWin();
+                draw();
+                raf = requestAnimationFrame(tick);
+                return;
+              }
+            }
+            if (collide(bird, p)) state = "dead";
+          }
+          if (bird.y + bird.r >= H - 2 || bird.y - bird.r <= 2) state = "dead";
+        }
+        draw();
+        if (!modal.classList.contains("hidden")) raf = requestAnimationFrame(tick);
+      }
+
+      function loop() {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(tick);
+      }
+
+      openBtn.addEventListener("click", openGame);
+      closeBtn?.addEventListener("click", closeGame);
+      backdrop?.addEventListener("click", closeGame);
+      winClose?.addEventListener("click", () => winModal?.classList.add("hidden"));
+      winBackdrop?.addEventListener("click", () => winModal?.classList.add("hidden"));
+      canvas.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
+        flap();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (modal.classList.contains("hidden") && winModal?.classList.contains("hidden")) return;
+        if (e.code === "Space" || e.code === "ArrowUp") {
+          if (!modal.classList.contains("hidden")) {
+            e.preventDefault();
+            flap();
+          }
+        }
+        if (e.code === "Escape") {
+          if (winModal && !winModal.classList.contains("hidden")) winModal.classList.add("hidden");
+          else if (!modal.classList.contains("hidden")) closeGame();
+        }
+      });
     })();
 
     function burstConfetti() {
@@ -1982,32 +2586,44 @@
       const slabs = Array.from(root.querySelectorAll(".ambient-slab"));
       if (slabs.length < 2) return;
 
-      const themes = [
+      const themes = window.AMBIENT_THEMES = [
         {
           cls: "ambient-theme-romantic",
           orbs: ["rgba(255, 92, 138, 0.22)", "rgba(240, 215, 140, 0.1)"],
+          particles: { mode: "bokeh", hues: [328, 42] },
         },
         {
           cls: "ambient-theme-anime-sky",
           orbs: ["rgba(244, 114, 182, 0.26)", "rgba(167, 139, 250, 0.18)"],
+          particles: { mode: "sparkle", hues: [285, 310, 195] },
         },
         {
           cls: "ambient-theme-sakura",
           orbs: ["rgba(251, 182, 206, 0.2)", "rgba(255, 228, 240, 0.12)"],
+          particles: { mode: "petal", hues: [340, 355] },
         },
         {
           cls: "ambient-theme-golden-hour",
           orbs: ["rgba(251, 113, 133, 0.2)", "rgba(250, 204, 21, 0.14)"],
+          particles: { mode: "ember", hues: [22, 38] },
         },
         {
           cls: "ambient-theme-anime-night",
           orbs: ["rgba(56, 189, 248, 0.18)", "rgba(232, 121, 249, 0.16)"],
+          particles: { mode: "star", hues: [195, 275] },
         },
         {
           cls: "ambient-theme-aurora",
           orbs: ["rgba(52, 211, 153, 0.18)", "rgba(167, 139, 250, 0.2)"],
+          particles: { mode: "wisp", hues: [155, 265] },
         },
       ];
+
+      function emitThemeChange(idx) {
+        window.dispatchEvent(
+          new CustomEvent("ambient-theme-change", { detail: { index: idx, theme: themes[idx] } })
+        );
+      }
 
       function setOrbs(t) {
         document.documentElement.style.setProperty("--orb-a", t.orbs[0]);
@@ -2017,6 +2633,7 @@
       let themeIndex = 0;
       let visibleLayer = 0;
       setOrbs(themes[0]);
+      emitThemeChange(0);
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (reduceMotion) {
@@ -2037,66 +2654,213 @@
         visibleLayer = incoming;
         themeIndex = nextIdx;
         setOrbs(t);
+        emitThemeChange(themeIndex);
       }
 
       window.setInterval(advance, 14000);
     })();
 
-    (function heartsCanvas() {
+    (function ambientParticles() {
       const c = document.getElementById("hearts-canvas");
+      if (!c) return;
       const ctx = c.getContext("2d");
-      let w, h, items;
+      let w = 0;
+      let h = 0;
+      let items = [];
+      let themeIdx = 0;
+      let particleCfg = { mode: "bokeh", hues: [328, 42] };
+      let blend = 1;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function pickHue(cfg, seed) {
+        const hues = cfg.hues || [330];
+        return hues[Math.floor(seed * hues.length) % hues.length];
+      }
+
+      function spawnOne() {
+        const seed = Math.random();
+        const s = 0.45 + Math.random() * 1.1;
+        const mode = particleCfg.mode;
+        const up = mode === "ember" || mode === "bokeh";
+        return {
+          x: Math.random() * w,
+          y: up ? h + Math.random() * 80 : Math.random() * h,
+          s,
+          o: 0.12 + Math.random() * 0.38,
+          hue: pickHue(particleCfg, seed),
+          phase: Math.random() * Math.PI * 2,
+          rot: Math.random() * Math.PI * 2,
+          spin: (Math.random() - 0.5) * 0.02,
+          drift: (Math.random() - 0.5) * 0.35,
+          vy: up ? -(0.15 + Math.random() * 0.55) : 0.2 + Math.random() * 0.65,
+          vx: (Math.random() - 0.5) * 0.25,
+          mode,
+        };
+      }
+
+      function reset() {
+        const n = Math.min(56, Math.max(28, Math.floor(w / 22)));
+        items = Array.from({ length: n }, spawnOne);
+      }
 
       function resize() {
         w = c.width = innerWidth;
         h = c.height = innerHeight;
       }
 
-      function reset() {
-        items = Array.from({ length: Math.min(52, Math.floor(w / 24)) }, () => ({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          s: 0.5 + Math.random() * 1.15,
-          sp: 0.28 + Math.random() * 0.85,
-          o: 0.14 + Math.random() * 0.32,
-          hue: 318 + Math.random() * 45,
-        }));
-      }
-
-      function heartPath(cx, cy, size) {
-        ctx.beginPath();
-        const topY = cy - size * 0.3;
-        ctx.moveTo(cx, cy + size * 0.35);
-        ctx.bezierCurveTo(cx - size, cy - size * 0.2, cx - size * 0.85, topY, cx, topY + size * 0.25);
-        ctx.bezierCurveTo(cx + size * 0.85, topY, cx + size, cy - size * 0.2, cx, cy + size * 0.35);
-        ctx.closePath();
-      }
-
-      function tick() {
-        ctx.clearRect(0, 0, w, h);
-        for (const it of items) {
-          it.y -= it.sp;
-          if (it.y < -40) {
-            it.y = h + 20;
+      function wrapParticle(it) {
+        const pad = 48;
+        if (it.mode === "ember" || it.mode === "bokeh") {
+          if (it.y < -pad) {
+            it.y = h + pad;
             it.x = Math.random() * w;
           }
+        } else if (it.y < -pad || it.y > h + pad) {
+          it.y = Math.random() * h;
+          it.x = Math.random() * w;
+        }
+        if (it.x < -pad) it.x = w + pad;
+        if (it.x > w + pad) it.x = -pad;
+      }
+
+      function drawBokeh(it, a) {
+        const r = 6 + it.s * 14;
+        const g = ctx.createRadialGradient(it.x, it.y, 0, it.x, it.y, r);
+        g.addColorStop(0, `hsla(${it.hue}, 88%, 78%, ${0.55 * a})`);
+        g.addColorStop(0.45, `hsla(${it.hue}, 75%, 65%, ${0.22 * a})`);
+        g.addColorStop(1, `hsla(${it.hue}, 70%, 55%, 0)`);
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(it.x, it.y, r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      function drawSparkle(it, a, t) {
+        const pulse = 0.65 + 0.35 * Math.sin(t * 0.004 + it.phase);
+        const r = 1.2 + it.s * 2.8 * pulse;
+        ctx.strokeStyle = `hsla(${it.hue}, 90%, 82%, ${a * pulse})`;
+        ctx.lineWidth = 1.1;
+        ctx.beginPath();
+        ctx.moveTo(it.x - r * 3, it.y);
+        ctx.lineTo(it.x + r * 3, it.y);
+        ctx.moveTo(it.x, it.y - r * 3);
+        ctx.lineTo(it.x, it.y + r * 3);
+        ctx.stroke();
+        ctx.fillStyle = `hsla(${it.hue}, 95%, 90%, ${a})`;
+        ctx.beginPath();
+        ctx.arc(it.x, it.y, r * 0.55, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      function drawPetal(it, a) {
+        ctx.save();
+        ctx.translate(it.x, it.y);
+        ctx.rotate(it.rot);
+        const rw = 5 + it.s * 7;
+        const rh = 3 + it.s * 4;
+        ctx.fillStyle = `hsla(${it.hue}, 72%, 82%, ${a})`;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, rw, rh, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      function drawEmber(it, a) {
+        const r = 1.5 + it.s * 3.5;
+        ctx.shadowBlur = 14;
+        ctx.shadowColor = `hsla(${it.hue}, 95%, 60%, ${0.65 * a})`;
+        ctx.fillStyle = `hsla(${it.hue}, 92%, 68%, ${a})`;
+        ctx.beginPath();
+        ctx.arc(it.x, it.y, r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+
+      function drawStar(it, a, t) {
+        const tw = 0.45 + 0.55 * Math.sin(t * 0.003 + it.phase);
+        const r = 0.8 + it.s * 2.2 * tw;
+        ctx.fillStyle = `hsla(${it.hue}, 85%, 88%, ${a * tw})`;
+        ctx.beginPath();
+        for (let i = 0; i < 5; i++) {
+          const ang = it.rot + (i * Math.PI * 2) / 5 - Math.PI / 2;
+          const rad = i % 2 === 0 ? r * 2.2 : r;
+          const px = it.x + Math.cos(ang) * rad;
+          const py = it.y + Math.sin(ang) * rad;
+          if (i === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      function drawWisp(it, a) {
+        ctx.save();
+        ctx.translate(it.x, it.y);
+        ctx.rotate(it.rot);
+        const g = ctx.createLinearGradient(-20, 0, 20, 0);
+        g.addColorStop(0, `hsla(${it.hue}, 80%, 70%, 0)`);
+        g.addColorStop(0.5, `hsla(${it.hue}, 85%, 75%, ${a * 0.7})`);
+        g.addColorStop(1, `hsla(${it.hue}, 80%, 70%, 0)`);
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 18 + it.s * 22, 3 + it.s * 4, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      function drawParticle(it, a, t) {
+        const mode = it.mode || particleCfg.mode;
+        if (mode === "bokeh") drawBokeh(it, a);
+        else if (mode === "sparkle") drawSparkle(it, a, t);
+        else if (mode === "petal") drawPetal(it, a);
+        else if (mode === "ember") drawEmber(it, a);
+        else if (mode === "star") drawStar(it, a, t);
+        else drawWisp(it, a);
+      }
+
+      function tick(t) {
+        ctx.clearRect(0, 0, w, h);
+        blend = Math.min(1, blend + 0.018);
+        const a = blend;
+        for (const it of items) {
+          if (!reduceMotion) {
+            it.y += it.vy;
+            it.x += it.vx + Math.sin(t * 0.0012 + it.phase) * it.drift;
+            it.rot += it.spin;
+            wrapParticle(it);
+          }
           ctx.save();
-          ctx.globalAlpha = it.o;
-          ctx.fillStyle = `hsla(${it.hue}, 82%, 70%, 1)`;
-          heartPath(it.x, it.y, 14 * it.s);
-          ctx.fill();
+          drawParticle(it, it.o * a, t);
           ctx.restore();
         }
-        requestAnimationFrame(tick);
+        if (!reduceMotion) requestAnimationFrame(tick);
       }
+
+      window.addEventListener("ambient-theme-change", (e) => {
+        const next = e.detail?.theme?.particles;
+        if (!next) return;
+        themeIdx = e.detail.index ?? themeIdx;
+        particleCfg = next;
+        blend = 0.35;
+        items.forEach((it) => {
+          it.mode = next.mode;
+          it.hue = pickHue(next, Math.random());
+          if (next.mode === "ember" || next.mode === "bokeh") {
+            it.vy = -(0.15 + Math.random() * 0.55);
+          } else {
+            it.vy = 0.2 + Math.random() * 0.65;
+          }
+        });
+      });
 
       resize();
       reset();
+      if (window.AMBIENT_THEMES?.[0]?.particles) particleCfg = window.AMBIENT_THEMES[0].particles;
       window.addEventListener("resize", () => {
         resize();
         reset();
       });
-      tick();
+      requestAnimationFrame(tick);
     })();
   </script>
 </body>
