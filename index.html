@@ -1744,14 +1744,14 @@
       /** Âm lượng mặc định (0–1), ~giữa vừa nghe */
       musicVolume: 0.5,
       /**
-       * Thư tay & Lời muốn nói: chỉ đọc rõ khi đã tới thời điểm này (giờ địa phương trên máy em).
-       * Mặc định: 23:59 ngày 17/5 — đổi năm mỗi năm nếu cần.
+       * Thư tay & Lời muốn nói: mở khi đã tới thời điểm này (giờ địa phương trên máy em).
+       * 23:00 ngày 17/5/2026.
        */
       birthdayReadUnlockYear: 2026,
       birthdayReadUnlockMonth: 5,
       birthdayReadUnlockDay: 17,
       birthdayReadUnlockHour: 23,
-      birthdayReadUnlockMinute: 59,
+      birthdayReadUnlockMinute: 0,
       birthdayReadWaitMessage: "Em hãy chờ đến ngày sinh nhật để đọc nhé",
       /** Mã trong link private xem kế hoạch: ?plan=... — đổi thành chuỗi riêng của bạn */
       plansPrivateKey: "khuyen-kehoach-2026",
@@ -1823,7 +1823,7 @@
       const mo = CONFIG.birthdayReadUnlockMonth;
       const d = CONFIG.birthdayReadUnlockDay;
       const h = CONFIG.birthdayReadUnlockHour ?? 23;
-      const mi = CONFIG.birthdayReadUnlockMinute ?? 59;
+      const mi = CONFIG.birthdayReadUnlockMinute ?? 0;
       return new Date(y, mo - 1, d, h, mi, 0, 0);
     }
 
